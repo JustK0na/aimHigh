@@ -9,10 +9,23 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+set(TS_FILES
+    i18n/aimHigh_en.ts
+    i18n/aimHigh_pl.ts
+)
+
+
+
+
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets LinguistTools Quick Network Core)
 find_package(Qt6 REQUIRED COMPONENTS Widgets LinguistTools Quick Network Core)
 
-set(TS_FILES aimHigh_en_GB.ts)
+set(TS_FILES
+    ${CMAKE_SOURCE_DIR}/i18n/aimHigh_en.ts
+    ${CMAKE_SOURCE_DIR}/i18n/aimHigh_pl.ts
+)
+
+qt_add_translation(QM_FILES ${TS_FILES})
 
 set(PROJECT_SOURCES
         main.cpp
@@ -22,7 +35,8 @@ set(PROJECT_SOURCES
         ${TS_FILES}
 )
 
-qt_add_executable(aimHigh MANUAL_FINALIZATION ${PROJECT_SOURCES})
+qt_add_executable(aimHigh MANUAL_FINALIZATION ${PROJECT_SOURCES}
+  apihandler.h apihandler.cpp)
 qt_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
 
 # Define target properties for Android with Qt 6 as:

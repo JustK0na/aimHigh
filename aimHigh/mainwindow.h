@@ -2,9 +2,11 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QtNetwork/QNetworkAccessManager>
-#include <QtNetwork/QNetworkReply>
 #include <QLabel>
+#include <QWidget>
+#include <QVBoxLayout>
+
+#include "apihandler.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -17,17 +19,20 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent = nullptr);
+    MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
 private slots:
-    void handleResponse();
+    void updateISSData(double longitude, double latitude, double altitude, double velocity);
 
 private:
     Ui::MainWindow *ui;
-    QNetworkAccessManager *networkManager;
-    QLabel *issLocationLabel;
 
-    void fetchISSData();
+    APIhandler *apiHandler;
+
+    QWidget *stats;
+    QLabel *issInfo;
+
+    QWidget *earthModel;
 };
 #endif // MAINWINDOW_H
