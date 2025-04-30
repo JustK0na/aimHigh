@@ -15,7 +15,7 @@ public:
     explicit APIhandler(QObject *parent = nullptr);
     void startConnection(int wait = 5000);
 signals:
-    void update(double latidute, double longitude, double altitude, double velocity);
+    void update(double latidute, double longitude, double altitude, double velocity, double timestamp);
 
 public slots:
     void sendRequest();

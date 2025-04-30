@@ -23,7 +23,7 @@ public:
     ~MainWindow();
 
 private slots:
-    void updateISSData(double longitude, double latitude, double altitude, double velocity);
+    void updateISSData(double longitude, double latitude, double altitude, double velocity, double timestamp);
 
 private:
     Ui::MainWindow *ui;

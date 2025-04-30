@@ -30,11 +30,12 @@ void APIhandler::getResponse(){
     QJsonObject jsonObj = jsonDoc.object();
 
     double latitude = jsonObj["latitude"].toDouble();
-    double longitude = jsonObj["longitude	"].toDouble();
+    double longitude = jsonObj["longitude"].toDouble();
     double altitude = jsonObj["altitude"].toDouble();
     double velocity = jsonObj["velocity"].toDouble();
+    double timestamp = jsonObj["timestamp"].toDouble();
 
-    emit update(latitude, longitude, altitude, velocity);
+    emit update(latitude, longitude, altitude, velocity, timestamp);
 
     reply->deleteLater();
 }

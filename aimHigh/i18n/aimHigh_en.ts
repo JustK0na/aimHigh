@@ -20,7 +20,8 @@
 Latitude: %1
 Longitude: %2
 Altitude: %3 km
-Velocity: %4 km\h</source>
+Velocity: %4 km\h
+Date: %5</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

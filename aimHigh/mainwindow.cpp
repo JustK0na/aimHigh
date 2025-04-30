@@ -6,6 +6,8 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QTimer>
+#include <time.h>
+#include <stdio.h>
 
 MainWindow::MainWindow(QWidget *parent):QMainWindow(parent), ui(new Ui::MainWindow){
     ui->setupUi(this);
@@ -32,12 +34,24 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent), ui(new Ui::MainWind
     apiHandler->startConnection(5000);
 }
 
-void MainWindow::updateISSData(double latitude, double longitude, double altitude, double velocity){
-    QString info = tr("ISS is now here: \nLatitude: %1\nLongitude: %2\nAltitude: %3 km\nVelocity: %4 km\\h")
+void MainWindow::updateISSData(double latitude, double longitude, double altitude, double velocity, double timestamp){
+    int timestampINT = (int)timestamp;
+    //from 1 january 1970
+    //+2 h bo UTC.
+
+    struct tm ts;
+    char buf[80];
+    time_t now = (time_t)timestampINT;
+
+    ts = *localtime(&now);
+    strftime(buf, sizeof(buf), "%a %Y-%m-%d %H:%M:%S %Z", &ts);
+
+    QString info = tr("ISS is now here: \nLatitude: %1\nLongitude: %2\nAltitude: %3 km\nVelocity: %4 km\\h\nDate: %5")
                        .arg(latitude, 0, 'f', 2)
                        .arg(longitude, 0, 'f', 2)
                        .arg(altitude, 0, 'f', 2)
-                       .arg(velocity, 0, 'f', 2);
+                       .arg(velocity, 0, 'f', 2)
+                       .arg(buf);
     issInfo->setText(info);
 }
 

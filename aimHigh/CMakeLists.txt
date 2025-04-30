@@ -9,42 +9,41 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(TS_FILES
-    i18n/aimHigh_en.ts
-    i18n/aimHigh_pl.ts
-)
-
-
-
-
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets LinguistTools Quick Network Core)
 find_package(Qt6 REQUIRED COMPONENTS Widgets LinguistTools Quick Network Core)
 
+# Define translation source files (.ts)
 set(TS_FILES
     ${CMAKE_SOURCE_DIR}/i18n/aimHigh_en.ts
     ${CMAKE_SOURCE_DIR}/i18n/aimHigh_pl.ts
 )
 
-qt_add_translation(QM_FILES ${TS_FILES})
-
-set(PROJECT_SOURCES
-        main.cpp
-        mainwindow.cpp
-        mainwindow.h
-        mainwindow.ui
-        ${TS_FILES}
-)
-
-qt_add_executable(aimHigh MANUAL_FINALIZATION ${PROJECT_SOURCES}
-  apihandler.h apihandler.cpp)
+# Add translations (.qm files will be created from .ts)
 qt_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
 
-# Define target properties for Android with Qt 6 as:
-#    set_property(TARGET aimHigh APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
-#                 ${CMAKE_CURRENT_SOURCE_DIR}/android)
-# For more information, see https://doc.qt.io/qt-6/qt-add-executable.html#target-creation
+# Add resource file with embedded .qm
+qt_add_resources(RESOURCES
+    "resources.qrc"
+)
 
+# Define project sources
+set(PROJECT_SOURCES
+    main.cpp
+    mainwindow.cpp
+    mainwindow.h
+    mainwindow.ui
+    apihandler.cpp
+    apihandler.h
+    ${RESOURCES}
+)
 
+# Add the executable
+qt_add_executable(aimHigh
+    MANUAL_FINALIZATION
+    ${PROJECT_SOURCES}
+)
+
+# Link libraries
 target_link_libraries(aimHigh
     PRIVATE
     Qt6::Widgets
@@ -53,12 +52,9 @@ target_link_libraries(aimHigh
     Qt6::Quick
 )
 
-
-# Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
-# If you are developing for iOS or macOS you should consider setting an
-# explicit, fixed bundle identifier manually though.
+# Bundle settings
 if(${QT_VERSION} VERSION_LESS 6.1.0)
-  set(BUNDLE_ID_OPTION MACOSX_BUNDLE_GUI_IDENTIFIER com.example.aimHigh)
+    set(BUNDLE_ID_OPTION MACOSX_BUNDLE_GUI_IDENTIFIER com.example.aimHigh)
 endif()
 set_target_properties(aimHigh PROPERTIES
     ${BUNDLE_ID_OPTION}
@@ -68,6 +64,7 @@ set_target_properties(aimHigh PROPERTIES
     WIN32_EXECUTABLE TRUE
 )
 
+# Install rules
 include(GNUInstallDirs)
 install(TARGETS aimHigh
     BUNDLE DESTINATION .
@@ -75,6 +72,7 @@ install(TARGETS aimHigh
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
 
+# Finalize executable (embed translations)
 if(QT_VERSION_MAJOR EQUAL 6)
-    qt_finalize_executable(aimHigh)
+    qt_finalize_executable(aimHigh ${QM_FILES})
 endif()
