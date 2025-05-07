@@ -1,0 +1,35 @@
+<map id="build/Desktop_Qt_6_9_0&#45;Debug/aimHigh_autogen/EWIEGA46WW/moc_mainwindow.cpp" name="build/Desktop_Qt_6_9_0&#45;Debug/aimHigh_autogen/EWIEGA46WW/moc_mainwindow.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="679,5,947,60"/>
+<area shape="rect" id="Node000002" href="$mainwindow_8h.html" title="Defines the MainWindow class." alt="" coords="195,108,359,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="679,58,362,108,361,103,678,53"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="383,108,531,133"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="705,63,518,107,516,102,703,57"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="555,108,711,133"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="759,62,670,105,668,100,757,58"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="735,108,890,133"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="815,60,815,94,810,94,810,60"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="915,108,1087,133"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="871,58,964,100,962,105,869,62"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="1111,108,1189,133"/>
+<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="916,57,1099,104,1098,109,915,63"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="1213,108,1391,133"/>
+<area shape="poly" id="edge16_Node000001_Node000017" title=" " alt="" coords="947,55,1224,103,1223,108,947,60"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,181,121,207"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="243,136,112,179,110,174,242,131"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="146,181,213,207"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="263,136,208,175,205,171,259,131"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="237,181,316,207"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="279,134,279,168,274,168,274,134"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="340,181,451,207"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="297,131,365,172,363,176,294,136"/>
+<area shape="rect" id="Node000007" href="$apihandler_8h.html" title="Fetches ISS data periodically from the web API." alt="" coords="475,181,577,207"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="317,131,473,175,472,180,316,136"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="314,255,389,280"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="499,209,394,252,392,247,497,204"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="413,255,484,280"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="515,209,473,247,470,243,512,205"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="509,255,698,280"/>
+<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="540,205,582,243,579,247,537,209"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="723,255,847,280"/>
+<area shape="poly" id="edge10_Node000007_Node000011" title=" " alt="" coords="568,204,730,248,729,254,567,209"/>
+</map>

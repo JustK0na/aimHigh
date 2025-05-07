@@ -9,8 +9,8 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets LinguistTools Quick Network Core)
-find_package(Qt6 REQUIRED COMPONENTS Widgets LinguistTools Quick Network Core)
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets LinguistTools Quick Network Core OpenGLWidgets)
+find_package(Qt6 REQUIRED COMPONENTS Widgets LinguistTools Quick Network Core OpenGLWidgets)
 
 # Define translation source files (.ts)
 set(TS_FILES
@@ -41,6 +41,7 @@ set(PROJECT_SOURCES
 qt_add_executable(aimHigh
     MANUAL_FINALIZATION
     ${PROJECT_SOURCES}
+    earthwidget.h earthwidget.cpp
 )
 
 # Link libraries
@@ -50,6 +51,8 @@ target_link_libraries(aimHigh
     Qt6::Network
     Qt6::Gui
     Qt6::Quick
+    Qt6::OpenGLWidgets
+    OpenGL::GL
 )
 
 # Bundle settings

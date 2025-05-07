@@ -1,0 +1,83 @@
+\doxysection{earth\+Widget Class Reference}
+\hypertarget{classearthWidget}{}\label{classearthWidget}\index{earthWidget@{earthWidget}}
+
+
+Creates and draws sphere and its lighting based on Open\+Gl.  
+
+
+
+
+{\ttfamily \#include $<$earthwidget.\+h$>$}
+
+
+
+Inherits QOpen\+GLWidget, and QOpen\+GLFunctions.
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classearthWidget_a2af4ac1a05c2997c59bc5fc28a62926a}\label{classearthWidget_a2af4ac1a05c2997c59bc5fc28a62926a} 
+{\bfseries earth\+Widget} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Earth\+Widget Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classearthWidget_a9524bd2f90eebb12e56c7d5d899691e2}\label{classearthWidget_a9524bd2f90eebb12e56c7d5d899691e2} 
+void {\bfseries initialize\+GL} () override
+\begin{DoxyCompactList}\small\item\em Initializes Open\+GL settings and enables simple lighting. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classearthWidget_a5ac5a2dd69147a5805a078826e3f6185}{resize\+GL}} (int w, int h) override
+\begin{DoxyCompactList}\small\item\em Resizes the Open\+GL viewport its called every time Widget needs to be resized. \end{DoxyCompactList}\item 
+\Hypertarget{classearthWidget_a3bd31b9ddd755cc8cd2237ba858ea94b}\label{classearthWidget_a3bd31b9ddd755cc8cd2237ba858ea94b} 
+void {\bfseries paint\+GL} () override
+\begin{DoxyCompactList}\small\item\em Renders the 3D scene, drawing the sphere by calling \doxylink{classearthWidget_a0d1d98c81450201d26ea56a348005a14}{draw\+Sphere()}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classearthWidget_a0d1d98c81450201d26ea56a348005a14}{draw\+Sphere}} (int lats, int longs)
+\begin{DoxyCompactList}\small\item\em Draws a sphere using Open\+GL and applies earth\textquotesingle{}s mateial properieties for lighting. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Creates and draws sphere and its lighting based on Open\+Gl. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classearthWidget_a0d1d98c81450201d26ea56a348005a14}\label{classearthWidget_a0d1d98c81450201d26ea56a348005a14} 
+\index{earthWidget@{earthWidget}!drawSphere@{drawSphere}}
+\index{drawSphere@{drawSphere}!earthWidget@{earthWidget}}
+\doxysubsubsection{\texorpdfstring{drawSphere()}{drawSphere()}}
+{\footnotesize\ttfamily void earth\+Widget\+::draw\+Sphere (\begin{DoxyParamCaption}\item[{int}]{lats,  }\item[{int}]{longs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Draws a sphere using Open\+GL and applies earth\textquotesingle{}s mateial properieties for lighting. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lats} & Number of latitude divisions for the sphere. \\
+\hline
+{\em longs} & Number of longitude divisions for the sphere. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classearthWidget_a5ac5a2dd69147a5805a078826e3f6185}\label{classearthWidget_a5ac5a2dd69147a5805a078826e3f6185} 
+\index{earthWidget@{earthWidget}!resizeGL@{resizeGL}}
+\index{resizeGL@{resizeGL}!earthWidget@{earthWidget}}
+\doxysubsubsection{\texorpdfstring{resizeGL()}{resizeGL()}}
+{\footnotesize\ttfamily void earth\+Widget\+::resize\+GL (\begin{DoxyParamCaption}\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+Resizes the Open\+GL viewport its called every time Widget needs to be resized. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & The new width of the widget. \\
+\hline
+{\em h} & The new height of the widget. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{earthwidget_8h}{earthwidget.\+h}}\item 
+earthwidget.\+cpp\end{DoxyCompactItemize}

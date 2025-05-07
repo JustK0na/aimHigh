@@ -1,3 +1,10 @@
+// mainwindow.h
+
+/**
+ * @file mainwindow.h
+ * @brief Defines the MainWindow class.
+ */
+
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
@@ -7,32 +14,48 @@
 #include <QVBoxLayout>
 
 #include "apihandler.h"
+#include "earthwidget.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
 }
 QT_END_NAMESPACE
-
+/**
+ * @class MainWindow
+ * @brief Main application window showing an Earth model and live ISS stats.
+ */
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
+    /**
+     * @brief main window constructor.
+     */
     MainWindow(QWidget *parent = nullptr);
+    /** @brief Destructor. */
     ~MainWindow();
 
 private slots:
+    /**
+     * @brief Slot that updates ISS data whenever new arrives.
+     * @param longitude Current longitude of the ISS.
+     * @param latitude  Current latitude of the ISS.
+     * @param altitude  Altitude in kilometers.
+     * @param velocity  Velocity in km/h.
+     * @param timestamp UTC timestamp since 1970 in seconds.
+     */
     void updateISSData(double longitude, double latitude, double altitude, double velocity, double timestamp);
 
 private:
-    Ui::MainWindow *ui;
+    Ui::MainWindow *ui;         ///< Qt Main Widget
 
-    APIhandler *apiHandler;
+    APIhandler *apiHandler;     ///< Handles the network calls
 
-    QWidget *stats;
-    QLabel *issInfo;
+    QWidget *stats;             ///< Container for the ISS stats labels
+    QLabel *issInfo;            ///< Label showing formatted ISS data
 
-    QWidget *earthModel;
+    QWidget *earthModel;        ///< Widget for Earth model
 };
 #endif // MAINWINDOW_H

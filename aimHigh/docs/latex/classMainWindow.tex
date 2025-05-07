@@ -1,0 +1,92 @@
+\doxysection{Main\+Window Class Reference}
+\hypertarget{classMainWindow}{}\label{classMainWindow}\index{MainWindow@{MainWindow}}
+
+
+Main application window showing an Earth model and live ISS stats.  
+
+
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
+
+
+Inherits QMain\+Window.
+
+
+
+Collaboration diagram for Main\+Window\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=177pt]{classMainWindow__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classMainWindow_a996c5a2b6f77944776856f08ec30858d}\label{classMainWindow_a996c5a2b6f77944776856f08ec30858d} 
+{\bfseries Main\+Window} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em main window constructor. \end{DoxyCompactList}\item 
+\Hypertarget{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7}\label{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Main\+Window} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMainWindow_ab2ebb6338f28375833e857a4d191a763}{update\+ISSData}} (double longitude, double latitude, double altitude, double velocity, double timestamp)
+\begin{DoxyCompactList}\small\item\em Slot that updates ISS data whenever new arrives. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classMainWindow_a35466a70ed47252a0191168126a352a5}\label{classMainWindow_a35466a70ed47252a0191168126a352a5} 
+Ui\+::\+Main\+Window \texorpdfstring{$\ast$}{*} {\bfseries ui}
+\begin{DoxyCompactList}\small\item\em Qt Main Widget. \end{DoxyCompactList}\item 
+\Hypertarget{classMainWindow_af4fc9eddc7897cb3c5a2228d030d50c8}\label{classMainWindow_af4fc9eddc7897cb3c5a2228d030d50c8} 
+\mbox{\hyperlink{classAPIhandler}{APIhandler}} \texorpdfstring{$\ast$}{*} {\bfseries api\+Handler}
+\begin{DoxyCompactList}\small\item\em Handles the network calls. \end{DoxyCompactList}\item 
+\Hypertarget{classMainWindow_ae10a7823d4e6a14e71cec217788e54ae}\label{classMainWindow_ae10a7823d4e6a14e71cec217788e54ae} 
+QWidget \texorpdfstring{$\ast$}{*} {\bfseries stats}
+\begin{DoxyCompactList}\small\item\em Container for the ISS stats labels. \end{DoxyCompactList}\item 
+\Hypertarget{classMainWindow_a9e2db187227c5c286f6b585163708124}\label{classMainWindow_a9e2db187227c5c286f6b585163708124} 
+QLabel \texorpdfstring{$\ast$}{*} {\bfseries iss\+Info}
+\begin{DoxyCompactList}\small\item\em Label showing formatted ISS data. \end{DoxyCompactList}\item 
+\Hypertarget{classMainWindow_a693e2149eb2e23c2e51bba0dd654a60e}\label{classMainWindow_a693e2149eb2e23c2e51bba0dd654a60e} 
+QWidget \texorpdfstring{$\ast$}{*} {\bfseries earth\+Model}
+\begin{DoxyCompactList}\small\item\em Widget for Earth model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main application window showing an Earth model and live ISS stats. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMainWindow_ab2ebb6338f28375833e857a4d191a763}\label{classMainWindow_ab2ebb6338f28375833e857a4d191a763} 
+\index{MainWindow@{MainWindow}!updateISSData@{updateISSData}}
+\index{updateISSData@{updateISSData}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{updateISSData}{updateISSData}}
+{\footnotesize\ttfamily void Main\+Window\+::update\+ISSData (\begin{DoxyParamCaption}\item[{double}]{longitude,  }\item[{double}]{latitude,  }\item[{double}]{altitude,  }\item[{double}]{velocity,  }\item[{double}]{timestamp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Slot that updates ISS data whenever new arrives. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em longitude} & Current longitude of the ISS. \\
+\hline
+{\em latitude} & Current latitude of the ISS. \\
+\hline
+{\em altitude} & Altitude in kilometers. \\
+\hline
+{\em velocity} & Velocity in km/h. \\
+\hline
+{\em timestamp} & UTC timestamp since 1970 in seconds. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{mainwindow_8h}{mainwindow.\+h}}\item 
+mainwindow.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,19 @@
+<map id="apihandler.cpp" name="apihandler.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="367,5,484,31"/>
+<area shape="rect" id="Node000002" href="$apihandler_8h.html" title="Fetches ISS data periodically from the web API." alt="" coords="166,79,269,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="393,33,265,77,263,72,391,28"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="293,79,419,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="416,33,379,71,375,67,412,29"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="444,79,545,104"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="439,29,476,67,472,71,435,33"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="569,79,620,104"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="454,28,558,72,555,77,452,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,80,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="190,106,85,149,83,144,188,102"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="105,152,175,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="207,106,165,144,161,141,203,102"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="200,152,389,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="232,102,274,141,270,144,228,106"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="414,152,538,177"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="260,101,422,146,420,151,258,107"/>
+</map>

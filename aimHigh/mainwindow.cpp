@@ -14,12 +14,21 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent), ui(new Ui::MainWind
 
     stats = new QWidget(this);
     issInfo = new QLabel(tr("Waiting for ISS data..."), stats);
+    QFont font("Arial", 12);
+    issInfo->setFont(font);
     QVBoxLayout *statsLayout = new QVBoxLayout(stats);
     statsLayout->addWidget(issInfo);
 
 
     earthModel = new QWidget(this);
-    earthModel->setStyleSheet("background-color: blue;");
+    earthModel->setStyleSheet("background-color: black; border: 2px solid gray;");
+    QVBoxLayout *earthLayout = new QVBoxLayout(earthModel);
+    earthLayout->setContentsMargins(5, 5, 5, 5);
+
+    earthWidget *earthView = new earthWidget(earthModel);
+    earthLayout->addWidget(earthView);
+
+
 
     QWidget *central = new QWidget(this);
     QHBoxLayout *mainLayout = new QHBoxLayout(central);
@@ -53,6 +62,8 @@ void MainWindow::updateISSData(double latitude, double longitude, double altitud
                        .arg(velocity, 0, 'f', 2)
                        .arg(buf);
     issInfo->setText(info);
+    QFont font("Arial", 12);
+    issInfo->setFont(font);
 }
 
 

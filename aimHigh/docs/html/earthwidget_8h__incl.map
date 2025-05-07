@@ -1,0 +1,7 @@
+<map id="earthwidget.h" name="earthwidget.h">
+<area shape="rect" id="Node000001" title="OpenGL based Qt class, displays 3D sphere that is model of Earth." alt="" coords="93,5,205,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,133,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,33,94,72,91,68,135,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="158,79,303,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="164,29,209,68,205,72,161,33"/>
+</map>

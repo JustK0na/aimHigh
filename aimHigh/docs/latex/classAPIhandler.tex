@@ -1,0 +1,97 @@
+\doxysection{APIhandler Class Reference}
+\hypertarget{classAPIhandler}{}\label{classAPIhandler}\index{APIhandler@{APIhandler}}
+
+
+Polls the ISS API and publishes new data.  
+
+
+
+
+{\ttfamily \#include $<$apihandler.\+h$>$}
+
+
+
+Inherits QObject.
+
+\doxysubsubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classAPIhandler_a06ded39f2bdf92c5a8a0f74f025e0666}\label{classAPIhandler_a06ded39f2bdf92c5a8a0f74f025e0666} 
+void {\bfseries send\+Request} ()
+\begin{DoxyCompactList}\small\item\em Sends a new HTTP GET. \end{DoxyCompactList}\item 
+\Hypertarget{classAPIhandler_a0aa2e1d1bf4753c0b377fbb807621cff}\label{classAPIhandler_a0aa2e1d1bf4753c0b377fbb807621cff} 
+void {\bfseries get\+Response} ()
+\begin{DoxyCompactList}\small\item\em Parses the JSON reply. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classAPIhandler_a486438a74950e5e0db1021b0e07caa12}{update}} (double latidute, double longitude, double altitude, double velocity, double timestamp)
+\begin{DoxyCompactList}\small\item\em Emitted whenever new ISS data is available. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classAPIhandler_abd0a4a4a6e57f77f0da3b24b50e8dd26}\label{classAPIhandler_abd0a4a4a6e57f77f0da3b24b50e8dd26} 
+{\bfseries APIhandler} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em \doxylink{classAPIhandler}{APIhandler} constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAPIhandler_abc02cb9efb48c4d7f1a323a0db2c58f7}{start\+Connection}} (int wait=5000)
+\begin{DoxyCompactList}\small\item\em Start polling the API every {\ttfamily wait} milliseconds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classAPIhandler_a8e5a360ff211cbf50069196b370e7c05}\label{classAPIhandler_a8e5a360ff211cbf50069196b370e7c05} 
+QNetwork\+Access\+Manager {\bfseries network\+Manager}
+\begin{DoxyCompactList}\small\item\em Manages network calls. \end{DoxyCompactList}\item 
+\Hypertarget{classAPIhandler_a3edf86a68f6e9fdb23137516ef0fe146}\label{classAPIhandler_a3edf86a68f6e9fdb23137516ef0fe146} 
+QTimer {\bfseries timer}
+\begin{DoxyCompactList}\small\item\em Timer for trigering polls. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Polls the ISS API and publishes new data. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classAPIhandler_abc02cb9efb48c4d7f1a323a0db2c58f7}\label{classAPIhandler_abc02cb9efb48c4d7f1a323a0db2c58f7} 
+\index{APIhandler@{APIhandler}!startConnection@{startConnection}}
+\index{startConnection@{startConnection}!APIhandler@{APIhandler}}
+\doxysubsubsection{\texorpdfstring{startConnection()}{startConnection()}}
+{\footnotesize\ttfamily void APIhandler\+::start\+Connection (\begin{DoxyParamCaption}\item[{int}]{wait = {\ttfamily 5000} }\end{DoxyParamCaption})}
+
+
+
+Start polling the API every {\ttfamily wait} milliseconds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wait} & interval for next API call in ms (5000ms). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classAPIhandler_a486438a74950e5e0db1021b0e07caa12}\label{classAPIhandler_a486438a74950e5e0db1021b0e07caa12} 
+\index{APIhandler@{APIhandler}!update@{update}}
+\index{update@{update}!APIhandler@{APIhandler}}
+\doxysubsubsection{\texorpdfstring{update}{update}}
+{\footnotesize\ttfamily void APIhandler\+::update (\begin{DoxyParamCaption}\item[{double}]{latidute,  }\item[{double}]{longitude,  }\item[{double}]{altitude,  }\item[{double}]{velocity,  }\item[{double}]{timestamp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Emitted whenever new ISS data is available. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em latidute} & Current latidute of the ISS. \\
+\hline
+{\em longitude} & Current longitude of the ISS. \\
+\hline
+{\em altitude} & Altitude in kilometers. \\
+\hline
+{\em velocity} & Velocity in km/h. \\
+\hline
+{\em timestamp} & UTC timestamp since 1970 in seconds. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{apihandler_8h}{apihandler.\+h}}\item 
+apihandler.\+cpp\item 
+build/\+Desktop\+\_\+\+Qt\+\_\+6\+\_\+9\+\_\+0-\/\+Debug/aim\+High\+\_\+autogen/\+EWIEGA46\+WW/moc\+\_\+apihandler.\+cpp\end{DoxyCompactItemize}

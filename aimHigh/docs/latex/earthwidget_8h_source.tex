@@ -1,0 +1,28 @@
+\doxysection{earthwidget.\+h}
+\hypertarget{earthwidget_8h_source}{}\label{earthwidget_8h_source}\mbox{\hyperlink{earthwidget_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ earthwidget.h}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ EARTHWIDGET\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ EARTHWIDGET\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QOpenGLWidget>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QOpenGLFunctions>}}
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classearthWidget}{earthWidget}}\ :\ \textcolor{keyword}{public}\ QOpenGLWidget,\ \textcolor{keyword}{protected}\ QOpenGLFunctions}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classearthWidget}{earthWidget}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classearthWidget_a9524bd2f90eebb12e56c7d5d899691e2}{initializeGL}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classearthWidget_a5ac5a2dd69147a5805a078826e3f6185}{resizeGL}}(\textcolor{keywordtype}{int}\ w,\ \textcolor{keywordtype}{int}\ h)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classearthWidget_a3bd31b9ddd755cc8cd2237ba858ea94b}{paintGL}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classearthWidget_a0d1d98c81450201d26ea56a348005a14}{drawSphere}}(\textcolor{keywordtype}{int}\ lats,\ \textcolor{keywordtype}{int}\ longs);}
+\DoxyCodeLine{00052\ \};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ EARTHWIDGET\_H}}
+
+\end{DoxyCode}

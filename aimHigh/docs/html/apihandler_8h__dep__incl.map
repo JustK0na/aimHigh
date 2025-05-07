@@ -1,0 +1,9 @@
+<map id="apihandler.h" name="apihandler.h">
+<area shape="rect" id="Node000001" title="Fetches ISS data periodically from the web API." alt="" coords="185,5,288,31"/>
+<area shape="rect" id="Node000002" href="$moc__apihandler_8cpp_source.html" title=" " alt="" coords="5,79,260,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="214,42,166,81,163,77,210,37"/>
+<area shape="rect" id="Node000003" href="$mainwindow_8h.html" title="Defines the MainWindow class." alt="" coords="284,93,400,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="263,37,329,91,326,95,260,41"/>
+<area shape="rect" id="Node000004" href="$moc__mainwindow_8cpp_source.html" title=" " alt="" coords="208,181,476,236"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="345,133,345,181,339,181,339,133"/>
+</map>
