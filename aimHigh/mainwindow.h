@@ -40,18 +40,19 @@ public:
 private slots:
     /**
      * @brief Slot that updates ISS data whenever new arrives.
-     * @param longitude Current longitude of the ISS.
      * @param latitude  Current latitude of the ISS.
+     * @param longitude Current longitude of the ISS.
      * @param altitude  Altitude in kilometers.
      * @param velocity  Velocity in km/h.
      * @param timestamp UTC timestamp since 1970 in seconds.
      */
-    void updateISSData(double longitude, double latitude, double altitude, double velocity, double timestamp);
+    void updateISSData(double latidude, double longitude, double altitude, double velocity, double timestamp);
 
 private:
     Ui::MainWindow *ui;         ///< Qt Main Widget
 
     APIhandler *apiHandler;     ///< Handles the network calls
+    earthWidget *earthView;     ///<Manages earth and ISS rendering
 
     QWidget *stats;             ///< Container for the ISS stats labels
     QLabel *issInfo;            ///< Label showing formatted ISS data

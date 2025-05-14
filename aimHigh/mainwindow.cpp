@@ -25,7 +25,7 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent), ui(new Ui::MainWind
     QVBoxLayout *earthLayout = new QVBoxLayout(earthModel);
     earthLayout->setContentsMargins(5, 5, 5, 5);
 
-    earthWidget *earthView = new earthWidget(earthModel);
+    earthView = new earthWidget(earthModel);
     earthLayout->addWidget(earthView);
 
 
@@ -40,6 +40,7 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent), ui(new Ui::MainWind
 
     apiHandler = new APIhandler(this);
     connect(apiHandler, &APIhandler::update, this, &MainWindow::updateISSData);
+    connect(apiHandler, &APIhandler::update, earthView, &earthWidget::updateISSData);
     apiHandler->startConnection(5000);
 }
 
