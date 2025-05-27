@@ -10,6 +10,8 @@
 
 #include <QOpenGLWidget>
 #include <QOpenGLFunctions>
+#include <QOpenGLTexture>
+#include <QImage>
 /**
  * @class earthWidget
  * @brief Creates and draws sphere and its lighting based on OpenGl.
@@ -55,6 +57,8 @@ protected:
 
 
 private:
+
+    QOpenGLTexture* earthTexture = nullptr; ////<Object ISS texture
 
 
     float issLat = 0.0; ///<Object ISS Latitude

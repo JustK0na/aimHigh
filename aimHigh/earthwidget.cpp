@@ -37,7 +37,10 @@ void earthWidget::drawSphere(int lats, int longs, float r, const QColor &color)
             float x = cos(lng);
             float y = sin(lng);
 
+            glTexCoord2f((float)(j) / longs, (float)(i) / lats);
             glVertex3f(x * zr0 * radius, y * zr0 * radius, z0 * radius);
+
+            glTexCoord2f((float)(j) / longs, (float)(i + 1) / lats);
             glVertex3f(x * zr1 * radius, y * zr1 * radius, z1 * radius);
         }
         glEnd();
@@ -51,6 +54,27 @@ void earthWidget::initializeGL()
     glEnable(GL_LIGHTING);
     glEnable(GL_LIGHT0);
     glClearColor(0.0f, 0.0f, 0.1f, 1.0f);
+    glEnable(GL_TEXTURE_2D);
+
+
+    QImage image;
+    QPoint center = image.rect().center();
+    QTransform matrixRotate;
+
+
+
+    if (image.load("/home/ai-thigs/studia/WDS/repo/aimHigh/aimHigh/resources/textures/blueMarble.jpg")){
+        matrixRotate.translate(center.x(), center.y());
+        matrixRotate.rotate(270);
+        image = image.transformed(matrixRotate);
+        earthTexture = new QOpenGLTexture(image);
+    }
+    else {
+
+        qWarning("Failed to load Earth texture image from resource.");
+    }
+
+
 
 
     GLfloat light_position[] = { 1.0f, 1.0f, 1.0f, 0.0f };
@@ -96,7 +120,7 @@ void earthWidget::paintGL()
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glLoadIdentity();
     glTranslatef(0.0f, 0.0f, -5.0f);
-
+    earthTexture->bind();
     drawSphere(40, 40, earthRadius, QColor(51, 153, 255)); // Lats and longs for smoother sphere
 
 

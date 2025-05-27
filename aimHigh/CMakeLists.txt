@@ -34,14 +34,15 @@ set(PROJECT_SOURCES
     mainwindow.ui
     apihandler.cpp
     apihandler.h
-    ${RESOURCES}
+    earthwidget.cpp
+    earthwidget.h
+    #${RESOURCES}
 )
 
 # Add the executable
 qt_add_executable(aimHigh
     MANUAL_FINALIZATION
     ${PROJECT_SOURCES}
-    earthwidget.h earthwidget.cpp
 )
 
 # Link libraries

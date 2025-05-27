@@ -3,4 +3,10 @@
         <file>i18n/aimHigh_en.qm</file>
         <file>i18n/aimHigh_pl.qm</file>
     </qresource>
+    <qresource prefix="/textures">
+        <file>resources/textures/blueMarble.jpg</file>
+    </qresource>
+    <qresource prefix="/textures">
+        <file>resources/textures/test.png</file>
+    </qresource>    
 </RCC>
