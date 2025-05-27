@@ -12,17 +12,28 @@
 \DoxyCodeLine{00018\ \{}
 \DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
 \DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classearthWidget}{earthWidget}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classearthWidget_a9524bd2f90eebb12e56c7d5d899691e2}{initializeGL}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classearthWidget_a5ac5a2dd69147a5805a078826e3f6185}{resizeGL}}(\textcolor{keywordtype}{int}\ w,\ \textcolor{keywordtype}{int}\ h)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classearthWidget_a3bd31b9ddd755cc8cd2237ba858ea94b}{paintGL}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ setISSPosition(\textcolor{keywordtype}{float}\ latitude,\ \textcolor{keywordtype}{float}\ longitude,\ \textcolor{keywordtype}{float}\ altitude);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classearthWidget_aef1b878fd8f9210e7583967f43e820b3}{updateISSData}}(\textcolor{keywordtype}{double}\ longitude,\ \textcolor{keywordtype}{double}\ latitude,\ \textcolor{keywordtype}{double}\ altitude,\ \textcolor{keywordtype}{double}\ velocity,\ \textcolor{keywordtype}{double}\ timestamp);}
+\DoxyCodeLine{00036\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classearthWidget_a9524bd2f90eebb12e56c7d5d899691e2}{initializeGL}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00041\ }
 \DoxyCodeLine{00042\ }
-\DoxyCodeLine{00043\ }
-\DoxyCodeLine{00044\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classearthWidget_a0d1d98c81450201d26ea56a348005a14}{drawSphere}}(\textcolor{keywordtype}{int}\ lats,\ \textcolor{keywordtype}{int}\ longs);}
-\DoxyCodeLine{00052\ \};}
-\DoxyCodeLine{00053\ }
-\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ EARTHWIDGET\_H}}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classearthWidget_a5ac5a2dd69147a5805a078826e3f6185}{resizeGL}}(\textcolor{keywordtype}{int}\ w,\ \textcolor{keywordtype}{int}\ h)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classearthWidget_a3bd31b9ddd755cc8cd2237ba858ea94b}{paintGL}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classearthWidget_acd4fca77ccdc3ae3fc985d8db10620ed}{issLat}}\ =\ 0.0;\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classearthWidget_ad738e8de88eab589dc00e8bf8237907e}{issLon}}\ =\ 0.0;\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classearthWidget_a4e0c26ad5499a182e4695a81368daa3e}{issAlt}}\ =\ 0.0;\ }
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classearthWidget_a17590eb4136992f9c881367630aa4958}{drawSphere}}(\textcolor{keywordtype}{int}\ lats,\ \textcolor{keywordtype}{int}\ longs,\ \textcolor{keywordtype}{float}\ r,\ \textcolor{keyword}{const}\ QColor\ \&color);}
+\DoxyCodeLine{00073\ \};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ EARTHWIDGET\_H}}
 
 \end{DoxyCode}

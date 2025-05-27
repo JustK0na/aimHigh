@@ -13,6 +13,11 @@ Creates and draws sphere and its lighting based on Open\+Gl.
 
 Inherits QOpen\+GLWidget, and QOpen\+GLFunctions.
 
+\doxysubsubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classearthWidget_aef1b878fd8f9210e7583967f43e820b3}{update\+ISSData}} (double longitude, double latitude, double altitude, double velocity, double timestamp)
+\begin{DoxyCompactList}\small\item\em Slot that updates ISS data whenever new arrives. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -29,23 +34,35 @@ void \mbox{\hyperlink{classearthWidget_a5ac5a2dd69147a5805a078826e3f6185}{resize
 \begin{DoxyCompactList}\small\item\em Resizes the Open\+GL viewport its called every time Widget needs to be resized. \end{DoxyCompactList}\item 
 \Hypertarget{classearthWidget_a3bd31b9ddd755cc8cd2237ba858ea94b}\label{classearthWidget_a3bd31b9ddd755cc8cd2237ba858ea94b} 
 void {\bfseries paint\+GL} () override
-\begin{DoxyCompactList}\small\item\em Renders the 3D scene, drawing the sphere by calling \doxylink{classearthWidget_a0d1d98c81450201d26ea56a348005a14}{draw\+Sphere()}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Renders the 3D scene, drawing the sphere by calling \doxylink{classearthWidget_a17590eb4136992f9c881367630aa4958}{draw\+Sphere()}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classearthWidget_a0d1d98c81450201d26ea56a348005a14}{draw\+Sphere}} (int lats, int longs)
+void \mbox{\hyperlink{classearthWidget_a17590eb4136992f9c881367630aa4958}{draw\+Sphere}} (int lats, int longs, float r, const QColor \&color)
 \begin{DoxyCompactList}\small\item\em Draws a sphere using Open\+GL and applies earth\textquotesingle{}s mateial properieties for lighting. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classearthWidget_acd4fca77ccdc3ae3fc985d8db10620ed}\label{classearthWidget_acd4fca77ccdc3ae3fc985d8db10620ed} 
+float {\bfseries iss\+Lat} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Object ISS Latitude. \end{DoxyCompactList}\item 
+\Hypertarget{classearthWidget_ad738e8de88eab589dc00e8bf8237907e}\label{classearthWidget_ad738e8de88eab589dc00e8bf8237907e} 
+float {\bfseries iss\+Lon} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Object ISS Longitude. \end{DoxyCompactList}\item 
+\Hypertarget{classearthWidget_a4e0c26ad5499a182e4695a81368daa3e}\label{classearthWidget_a4e0c26ad5499a182e4695a81368daa3e} 
+float {\bfseries iss\+Alt} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Object ISS Altitude. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Creates and draws sphere and its lighting based on Open\+Gl. 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classearthWidget_a0d1d98c81450201d26ea56a348005a14}\label{classearthWidget_a0d1d98c81450201d26ea56a348005a14} 
+\Hypertarget{classearthWidget_a17590eb4136992f9c881367630aa4958}\label{classearthWidget_a17590eb4136992f9c881367630aa4958} 
 \index{earthWidget@{earthWidget}!drawSphere@{drawSphere}}
 \index{drawSphere@{drawSphere}!earthWidget@{earthWidget}}
 \doxysubsubsection{\texorpdfstring{drawSphere()}{drawSphere()}}
-{\footnotesize\ttfamily void earth\+Widget\+::draw\+Sphere (\begin{DoxyParamCaption}\item[{int}]{lats,  }\item[{int}]{longs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily void earth\+Widget\+::draw\+Sphere (\begin{DoxyParamCaption}\item[{int}]{lats,  }\item[{int}]{longs,  }\item[{float}]{r,  }\item[{const QColor \&}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -56,6 +73,10 @@ Draws a sphere using Open\+GL and applies earth\textquotesingle{}s mateial prope
 {\em lats} & Number of latitude divisions for the sphere. \\
 \hline
 {\em longs} & Number of longitude divisions for the sphere. \\
+\hline
+{\em r} & radius of the sphere \\
+\hline
+{\em color} & color of the sphere, in QColor type \\
 \hline
 \end{DoxyParams}
 \Hypertarget{classearthWidget_a5ac5a2dd69147a5805a078826e3f6185}\label{classearthWidget_a5ac5a2dd69147a5805a078826e3f6185} 
@@ -73,6 +94,29 @@ Resizes the Open\+GL viewport its called every time Widget needs to be resized.
 {\em w} & The new width of the widget. \\
 \hline
 {\em h} & The new height of the widget. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classearthWidget_aef1b878fd8f9210e7583967f43e820b3}\label{classearthWidget_aef1b878fd8f9210e7583967f43e820b3} 
+\index{earthWidget@{earthWidget}!updateISSData@{updateISSData}}
+\index{updateISSData@{updateISSData}!earthWidget@{earthWidget}}
+\doxysubsubsection{\texorpdfstring{updateISSData}{updateISSData}}
+{\footnotesize\ttfamily void earth\+Widget\+::update\+ISSData (\begin{DoxyParamCaption}\item[{double}]{longitude,  }\item[{double}]{latitude,  }\item[{double}]{altitude,  }\item[{double}]{velocity,  }\item[{double}]{timestamp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot that updates ISS data whenever new arrives. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em longitude} & Current longitude of the ISS. \\
+\hline
+{\em latitude} & Current latitude of the ISS. \\
+\hline
+{\em altitude} & Altitude in kilometers. \\
+\hline
+{\em velocity} & Velocity in km/h. \\
+\hline
+{\em timestamp} & UTC timestamp since 1970 in seconds. \\
 \hline
 \end{DoxyParams}
 

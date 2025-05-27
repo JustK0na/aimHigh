@@ -71,9 +71,11 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-slots">Public Slots</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classearthWidget-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">earthWidget Class Reference</div></div>
 </div><!--header-->
@@ -86,6 +88,12 @@ $(function() {
 
 <p>Inherits QOpenGLWidget, and QOpenGLFunctions.</p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-slots" name="pub-slots"></a>
+Public Slots</h2></td></tr>
+<tr class="memitem:aef1b878fd8f9210e7583967f43e820b3" id="r_aef1b878fd8f9210e7583967f43e820b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classearthWidget.html#aef1b878fd8f9210e7583967f43e820b3">updateISSData</a> (double longitude, double latitude, double altitude, double velocity, double timestamp)</td></tr>
+<tr class="memdesc:aef1b878fd8f9210e7583967f43e820b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slot that updates ISS data whenever new arrives.  <br /></td></tr>
+<tr class="separator:aef1b878fd8f9210e7583967f43e820b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2af4ac1a05c2997c59bc5fc28a62926a" id="r_a2af4ac1a05c2997c59bc5fc28a62926a"><td class="memItemLeft" align="right" valign="top"><a id="a2af4ac1a05c2997c59bc5fc28a62926a" name="a2af4ac1a05c2997c59bc5fc28a62926a"></a>
@@ -104,20 +112,35 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>initializeGL</b> () o
 <tr class="separator:a5ac5a2dd69147a5805a078826e3f6185"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bd31b9ddd755cc8cd2237ba858ea94b" id="r_a3bd31b9ddd755cc8cd2237ba858ea94b"><td class="memItemLeft" align="right" valign="top"><a id="a3bd31b9ddd755cc8cd2237ba858ea94b" name="a3bd31b9ddd755cc8cd2237ba858ea94b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>paintGL</b> () override</td></tr>
-<tr class="memdesc:a3bd31b9ddd755cc8cd2237ba858ea94b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders the 3D scene, drawing the sphere by calling <a class="el" href="classearthWidget.html#a0d1d98c81450201d26ea56a348005a14" title="Draws a sphere using OpenGL and applies earth&#39;s mateial properieties for lighting.">drawSphere()</a>. <br /></td></tr>
+<tr class="memdesc:a3bd31b9ddd755cc8cd2237ba858ea94b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders the 3D scene, drawing the sphere by calling <a class="el" href="classearthWidget.html#a17590eb4136992f9c881367630aa4958" title="Draws a sphere using OpenGL and applies earth&#39;s mateial properieties for lighting.">drawSphere()</a>. <br /></td></tr>
 <tr class="separator:a3bd31b9ddd755cc8cd2237ba858ea94b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a0d1d98c81450201d26ea56a348005a14" id="r_a0d1d98c81450201d26ea56a348005a14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classearthWidget.html#a0d1d98c81450201d26ea56a348005a14">drawSphere</a> (int lats, int longs)</td></tr>
-<tr class="memdesc:a0d1d98c81450201d26ea56a348005a14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a sphere using OpenGL and applies earth's mateial properieties for lighting.  <br /></td></tr>
-<tr class="separator:a0d1d98c81450201d26ea56a348005a14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17590eb4136992f9c881367630aa4958" id="r_a17590eb4136992f9c881367630aa4958"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classearthWidget.html#a17590eb4136992f9c881367630aa4958">drawSphere</a> (int lats, int longs, float r, const QColor &amp;color)</td></tr>
+<tr class="memdesc:a17590eb4136992f9c881367630aa4958"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a sphere using OpenGL and applies earth's mateial properieties for lighting.  <br /></td></tr>
+<tr class="separator:a17590eb4136992f9c881367630aa4958"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:acd4fca77ccdc3ae3fc985d8db10620ed" id="r_acd4fca77ccdc3ae3fc985d8db10620ed"><td class="memItemLeft" align="right" valign="top"><a id="acd4fca77ccdc3ae3fc985d8db10620ed" name="acd4fca77ccdc3ae3fc985d8db10620ed"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>issLat</b> = 0.0</td></tr>
+<tr class="memdesc:acd4fca77ccdc3ae3fc985d8db10620ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object ISS Latitude. <br /></td></tr>
+<tr class="separator:acd4fca77ccdc3ae3fc985d8db10620ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad738e8de88eab589dc00e8bf8237907e" id="r_ad738e8de88eab589dc00e8bf8237907e"><td class="memItemLeft" align="right" valign="top"><a id="ad738e8de88eab589dc00e8bf8237907e" name="ad738e8de88eab589dc00e8bf8237907e"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>issLon</b> = 0.0</td></tr>
+<tr class="memdesc:ad738e8de88eab589dc00e8bf8237907e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object ISS Longitude. <br /></td></tr>
+<tr class="separator:ad738e8de88eab589dc00e8bf8237907e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e0c26ad5499a182e4695a81368daa3e" id="r_a4e0c26ad5499a182e4695a81368daa3e"><td class="memItemLeft" align="right" valign="top"><a id="a4e0c26ad5499a182e4695a81368daa3e" name="a4e0c26ad5499a182e4695a81368daa3e"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>issAlt</b> = 0.0</td></tr>
+<tr class="memdesc:a4e0c26ad5499a182e4695a81368daa3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object ISS Altitude. <br /></td></tr>
+<tr class="separator:a4e0c26ad5499a182e4695a81368daa3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Creates and draws sphere and its lighting based on OpenGl. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a0d1d98c81450201d26ea56a348005a14" name="a0d1d98c81450201d26ea56a348005a14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d1d98c81450201d26ea56a348005a14">&#9670;&#160;</a></span>drawSphere()</h2>
+<a id="a17590eb4136992f9c881367630aa4958" name="a17590eb4136992f9c881367630aa4958"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17590eb4136992f9c881367630aa4958">&#9670;&#160;</a></span>drawSphere()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -135,7 +158,19 @@ Private Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>longs</em>&#160;</td>
+          <td class="paramname"><em>longs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QColor &amp;&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -155,6 +190,8 @@ Private Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">lats</td><td>Number of latitude divisions for the sphere. </td></tr>
     <tr><td class="paramname">longs</td><td>Number of longitude divisions for the sphere. </td></tr>
+    <tr><td class="paramname">r</td><td>radius of the sphere </td></tr>
+    <tr><td class="paramname">color</td><td>color of the sphere, in QColor type </td></tr>
   </table>
   </dd>
 </dl>
@@ -200,6 +237,72 @@ Private Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">w</td><td>The new width of the widget. </td></tr>
     <tr><td class="paramname">h</td><td>The new height of the widget. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aef1b878fd8f9210e7583967f43e820b3" name="aef1b878fd8f9210e7583967f43e820b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef1b878fd8f9210e7583967f43e820b3">&#9670;&#160;</a></span>updateISSData</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void earthWidget::updateISSData </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>longitude</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>latitude</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>altitude</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>velocity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>timestamp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Slot that updates ISS data whenever new arrives. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">longitude</td><td>Current longitude of the ISS. </td></tr>
+    <tr><td class="paramname">latitude</td><td>Current latitude of the ISS. </td></tr>
+    <tr><td class="paramname">altitude</td><td>Altitude in kilometers. </td></tr>
+    <tr><td class="paramname">velocity</td><td>Velocity in km/h. </td></tr>
+    <tr><td class="paramname">timestamp</td><td>UTC timestamp since 1970 in seconds. </td></tr>
   </table>
   </dd>
 </dl>

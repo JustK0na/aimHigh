@@ -87,7 +87,7 @@ void earthWidget::paintGL()
     float latRad = qDegreesToRadians(issLat);
     float lonRad = qDegreesToRadians(issLon);
     float trueAlt = earthRadius + (issAlt * scale);
-
+    trueAlt+=0*(issAlt*scale); //for visual clarity, needs to be removed in final version.
     float x = trueAlt * cos(latRad) * cos(lonRad);
     float y = trueAlt * sin(latRad);
     float z = trueAlt * cos(latRad) * sin(lonRad);

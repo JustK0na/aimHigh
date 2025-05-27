@@ -20,7 +20,7 @@ Collaboration diagram for Main\+Window\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=177pt]{classMainWindow__coll__graph}
+\includegraphics[width=244pt]{classMainWindow__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
@@ -35,7 +35,7 @@ Collaboration diagram for Main\+Window\+:
 \doxysubsubsection*{Private Slots}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classMainWindow_ab2ebb6338f28375833e857a4d191a763}{update\+ISSData}} (double longitude, double latitude, double altitude, double velocity, double timestamp)
+void \mbox{\hyperlink{classMainWindow_a2875457cd98936196cc144978ad11b53}{update\+ISSData}} (double latidude, double longitude, double altitude, double velocity, double timestamp)
 \begin{DoxyCompactList}\small\item\em Slot that updates ISS data whenever new arrives. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -46,6 +46,9 @@ Ui\+::\+Main\+Window \texorpdfstring{$\ast$}{*} {\bfseries ui}
 \Hypertarget{classMainWindow_af4fc9eddc7897cb3c5a2228d030d50c8}\label{classMainWindow_af4fc9eddc7897cb3c5a2228d030d50c8} 
 \mbox{\hyperlink{classAPIhandler}{APIhandler}} \texorpdfstring{$\ast$}{*} {\bfseries api\+Handler}
 \begin{DoxyCompactList}\small\item\em Handles the network calls. \end{DoxyCompactList}\item 
+\Hypertarget{classMainWindow_af530776471e7f42459a46f98e125e087}\label{classMainWindow_af530776471e7f42459a46f98e125e087} 
+\mbox{\hyperlink{classearthWidget}{earth\+Widget}} \texorpdfstring{$\ast$}{*} {\bfseries earth\+View}
+\begin{DoxyCompactList}\small\item\em Manages earth and ISS rendering. \end{DoxyCompactList}\item 
 \Hypertarget{classMainWindow_ae10a7823d4e6a14e71cec217788e54ae}\label{classMainWindow_ae10a7823d4e6a14e71cec217788e54ae} 
 QWidget \texorpdfstring{$\ast$}{*} {\bfseries stats}
 \begin{DoxyCompactList}\small\item\em Container for the ISS stats labels. \end{DoxyCompactList}\item 
@@ -61,11 +64,11 @@ QWidget \texorpdfstring{$\ast$}{*} {\bfseries earth\+Model}
 Main application window showing an Earth model and live ISS stats. 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classMainWindow_ab2ebb6338f28375833e857a4d191a763}\label{classMainWindow_ab2ebb6338f28375833e857a4d191a763} 
+\Hypertarget{classMainWindow_a2875457cd98936196cc144978ad11b53}\label{classMainWindow_a2875457cd98936196cc144978ad11b53} 
 \index{MainWindow@{MainWindow}!updateISSData@{updateISSData}}
 \index{updateISSData@{updateISSData}!MainWindow@{MainWindow}}
 \doxysubsubsection{\texorpdfstring{updateISSData}{updateISSData}}
-{\footnotesize\ttfamily void Main\+Window\+::update\+ISSData (\begin{DoxyParamCaption}\item[{double}]{longitude,  }\item[{double}]{latitude,  }\item[{double}]{altitude,  }\item[{double}]{velocity,  }\item[{double}]{timestamp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+{\footnotesize\ttfamily void Main\+Window\+::update\+ISSData (\begin{DoxyParamCaption}\item[{double}]{latidude,  }\item[{double}]{longitude,  }\item[{double}]{altitude,  }\item[{double}]{velocity,  }\item[{double}]{timestamp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
 
 
 
@@ -73,9 +76,9 @@ Slot that updates ISS data whenever new arrives.
 
 
 \begin{DoxyParams}{Parameters}
-{\em longitude} & Current longitude of the ISS. \\
-\hline
 {\em latitude} & Current latitude of the ISS. \\
+\hline
+{\em longitude} & Current longitude of the ISS. \\
 \hline
 {\em altitude} & Altitude in kilometers. \\
 \hline

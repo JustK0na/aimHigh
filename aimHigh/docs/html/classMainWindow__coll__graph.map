@@ -1,5 +1,7 @@
 <map id="MainWindow" name="MainWindow">
-<area shape="rect" id="Node000001" title="Main application window showing an Earth model and live ISS stats." alt="" coords="5,93,112,119"/>
-<area shape="rect" id="Node000002" href="$classAPIhandler.html" title="Polls the ISS API and publishes new data." alt="" coords="13,5,105,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="61,45,61,93,56,93,56,45"/>
+<area shape="rect" id="Node000001" title="Main application window showing an Earth model and live ISS stats." alt="" coords="58,93,165,119"/>
+<area shape="rect" id="Node000002" href="$classAPIhandler.html" title="Polls the ISS API and publishes new data." alt="" coords="5,5,97,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="59,43,70,68,94,91,91,95,65,71,54,45"/>
+<area shape="rect" id="Node000003" href="$classearthWidget.html" title="Creates and draws sphere and its lighting based on OpenGl." alt="" coords="121,5,224,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="162,45,145,71,125,95,121,91,141,68,158,42"/>
 </map>
