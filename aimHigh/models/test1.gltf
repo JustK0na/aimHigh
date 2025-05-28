@@ -38,9 +38,12 @@
 			"doubleSided":true,
 			"name":"Material.001",
 			"pbrMetallicRoughness":{
-				"baseColorTexture":{
-					"index":0
-				},
+				"baseColorFactor":[
+					0.06902540475130081,
+					0.02212429977953434,
+					0.499859094619751,
+					1
+				],
 				"metallicFactor":0.25833332538604736,
 				"roughnessFactor":0.7833333015441895
 			}
@@ -88,19 +91,6 @@
 					"material":1
 				}
 			]
-		}
-	],
-	"textures":[
-		{
-			"sampler":0,
-			"source":0
-		}
-	],
-	"images":[
-		{
-			"mimeType":"image/jpeg",
-			"name":"blueMarble",
-			"uri":"blueMarble.jpg"
 		}
 	],
 	"accessors":[
@@ -221,12 +211,6 @@
 			"byteLength":5760,
 			"byteOffset":132736,
 			"target":34963
-		}
-	],
-	"samplers":[
-		{
-			"magFilter":9729,
-			"minFilter":9987
 		}
 	],
 	"buffers":[
