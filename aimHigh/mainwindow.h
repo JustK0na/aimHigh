@@ -34,6 +34,11 @@ public:
      * @brief main window constructor.
      */
     MainWindow(QWidget *parent = nullptr);
+    /**
+     * @brief Loads 3D scenes from blender.
+     */
+    QWidget* init3DScene();
+
     /** @brief Destructor. */
     ~MainWindow();
 
@@ -58,5 +63,7 @@ private:
     QLabel *issInfo;            ///< Label showing formatted ISS data
 
     QWidget *earthModel;        ///< Widget for Earth model
+
+    QWidget *container;
 };
 #endif // MAINWINDOW_H

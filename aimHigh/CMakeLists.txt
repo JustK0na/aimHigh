@@ -11,6 +11,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets LinguistTools Quick Network Core OpenGLWidgets)
 find_package(Qt6 REQUIRED COMPONENTS Widgets LinguistTools Quick Network Core OpenGLWidgets)
+find_package(Qt6 REQUIRED COMPONENTS 3DCore 3DRender 3DExtras 3DInput Widgets)
 
 # Define translation source files (.ts)
 set(TS_FILES
@@ -54,6 +55,10 @@ target_link_libraries(aimHigh
     Qt6::Quick
     Qt6::OpenGLWidgets
     OpenGL::GL
+    Qt6::3DCore
+    Qt6::3DRender
+    Qt6::3DExtras
+    Qt6::3DInput
 )
 
 # Bundle settings

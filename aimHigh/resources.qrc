@@ -8,5 +8,8 @@
     </qresource>
     <qresource prefix="/textures">
         <file>resources/textures/test.png</file>
+    </qresource>
+     <qresource prefix="/models">
+        <file>resources/models/test.glb</file>
     </qresource>    
 </RCC>
