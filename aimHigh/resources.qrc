@@ -1,7 +1,7 @@
 <RCC>
-    <qresource prefix="/i18n">
-        <file>i18n/aimHigh_en.qm</file>
-        <file>i18n/aimHigh_pl.qm</file>
+    <qresource prefix="/translations">
+        <file>i18n/app_en.qm</file>
+	<file>i18n/app_pl.qm</file>
     </qresource>
     <qresource prefix="/textures">
         <file>resources/textures/blueMarble.jpg</file>
@@ -9,7 +9,8 @@
     <qresource prefix="/textures">
         <file>resources/textures/test.png</file>
     </qresource>
-     <qresource prefix="/models">
-        <file>resources/models/test.glb</file>
-    </qresource>    
+    <qresource prefix="/models">
+    <file>models/test.glb</file>
+    </qresource>
+
 </RCC>

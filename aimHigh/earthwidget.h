@@ -1,4 +1,4 @@
-// earthwidget.h
+ // earthwidget.h
 
 /**
  * @file earthwidget.h

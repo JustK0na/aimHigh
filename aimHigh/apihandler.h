@@ -31,6 +31,20 @@ public:
      * @param wait interval for next API call in ms (5000ms).
      */
     void startConnection(int wait = 5000);
+
+    /**
+     * @brief Stops timer for live tracking.
+     */
+    void pauseLiveTracking();
+    /**
+     * @brief Resumes timer for live tracking
+     */
+    void resumeLiveTracking();
+    /**
+     * @brief Connects and sends request using API call to specific date
+     * @param timestamp Date to poll data from.
+     */
+    void fetchISSAtTimestamp(qint64 timestamp);
 signals:
     /**
      * @brief Emitted whenever new ISS data is available.
@@ -49,6 +63,8 @@ public slots:
 private:
     QNetworkAccessManager networkManager;   ///< Manages network calls
     QTimer timer;                           ///< Timer for trigering polls
+
+    QTimer *updateTimer = nullptr;
 };
 
 #endif // APIHANDLER_H

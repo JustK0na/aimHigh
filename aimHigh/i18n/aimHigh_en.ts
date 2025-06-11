@@ -10,12 +10,25 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="14"/>
+        <location filename="../mainwindow.cpp" line="25"/>
+        <location filename="../mainwindow.cpp" line="262"/>
         <source>Waiting for ISS data...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="36"/>
+        <location filename="../mainwindow.cpp" line="35"/>
+        <location filename="../mainwindow.cpp" line="263"/>
+        <source>Show ISS at Selected Time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="43"/>
+        <location filename="../mainwindow.cpp" line="264"/>
+        <source>Resume Live Tracking</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="117"/>
         <source>ISS is now here: 
 Latitude: %1
 Longitude: %2

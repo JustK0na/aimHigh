@@ -12,7 +12,9 @@
 #include <QLabel>
 #include <QWidget>
 #include <QVBoxLayout>
-
+#include <Qt3DCore>
+#include <QPushButton>
+#include <QDateTimeEdit>
 #include "apihandler.h"
 #include "earthwidget.h"
 
@@ -38,6 +40,20 @@ public:
      * @brief Loads 3D scenes from blender.
      */
     QWidget* init3DScene();
+    /**
+     * @brief Moves object from blender that simulates ISS.
+     * @param lat  Current latitude of the ISS.
+     * @param lon Current longitude of the ISS.
+     * @param altKm  Altitude in kilometers.
+     */
+    QVector3D convertLatLonTo3D(float lat, float lon, float altKm);
+    /**
+     * @brief Rotates Earth and ISS to simulate passing days.
+     * @param timestamp Current time.
+     */
+    void updateEarthRotation(double timestamp);
+
+    void switchLanguage(const QString &languageCode);
 
     /** @brief Destructor. */
     ~MainWindow();
@@ -52,9 +68,23 @@ private slots:
      * @param timestamp UTC timestamp since 1970 in seconds.
      */
     void updateISSData(double latidude, double longitude, double altitude, double velocity, double timestamp);
+    /**
+     * @brief Sends infot to apihandler to get data about specific time.
+     */
+    void fetchISSAtSelectedTime();
+    /**
+     * @brief Sends info to apihandler to start timer for live tracking
+     */
+    void resumeLiveTracking();
 
 private:
     Ui::MainWindow *ui;         ///< Qt Main Widget
+
+    Qt3DCore::QTransform *issTransform = nullptr; ///< Transforms positions of ISS imported from blender
+
+    Qt3DCore::QTransform *earthRotationTransform = nullptr; ///< Transforms positions of Earth imported from blender
+
+    Qt3DCore::QEntity *earthSystemRoot = nullptr; ///< Locks both ISS and Earth to rotate them together with passing day
 
     APIhandler *apiHandler;     ///< Handles the network calls
     earthWidget *earthView;     ///<Manages earth and ISS rendering
@@ -64,6 +94,16 @@ private:
 
     QWidget *earthModel;        ///< Widget for Earth model
 
-    QWidget *container;
+    QWidget *container;         ///< Container for blender scene
+
+    QDateTimeEdit *dateTimeEdit; ///< Changing date for ISS position calculations
+
+    QPushButton *resumeLiveButton; ///< Button for user to set current date
+
+    QPushButton *fetchDateButton; ///< Button for user to set custom date
+
+    QTranslator translator;
+
+    QString currentLanguage;
 };
 #endif // MAINWINDOW_H

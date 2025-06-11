@@ -23,9 +23,7 @@ set(TS_FILES
 qt_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
 
 # Add resource file with embedded .qm
-qt_add_resources(RESOURCES
-    "resources.qrc"
-)
+# qt_add_resources(APP_RESOURCES resources.qrc)
 
 # Define project sources
 set(PROJECT_SOURCES
@@ -37,6 +35,7 @@ set(PROJECT_SOURCES
     apihandler.h
     earthwidget.cpp
     earthwidget.h
+    resources.qrc
     #${RESOURCES}
 )
 
@@ -44,6 +43,7 @@ set(PROJECT_SOURCES
 qt_add_executable(aimHigh
     MANUAL_FINALIZATION
     ${PROJECT_SOURCES}
+    ${APP_RESOURCES}
 )
 
 # Link libraries
