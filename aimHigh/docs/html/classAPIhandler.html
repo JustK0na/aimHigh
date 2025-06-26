@@ -113,6 +113,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abc02cb9efb48c4d7f1a323a0db2c58f7" id="r_abc02cb9efb48c4d7f1a323a0db2c58f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAPIhandler.html#abc02cb9efb48c4d7f1a323a0db2c58f7">startConnection</a> (int wait=5000)</td></tr>
 <tr class="memdesc:abc02cb9efb48c4d7f1a323a0db2c58f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start polling the API every <code>wait</code> milliseconds.  <br /></td></tr>
 <tr class="separator:abc02cb9efb48c4d7f1a323a0db2c58f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc0f97210eced5e7cdff1a46e3c119ee" id="r_adc0f97210eced5e7cdff1a46e3c119ee"><td class="memItemLeft" align="right" valign="top"><a id="adc0f97210eced5e7cdff1a46e3c119ee" name="adc0f97210eced5e7cdff1a46e3c119ee"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>pauseLiveTracking</b> ()</td></tr>
+<tr class="memdesc:adc0f97210eced5e7cdff1a46e3c119ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops timer for live tracking. <br /></td></tr>
+<tr class="separator:adc0f97210eced5e7cdff1a46e3c119ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ca5d27e76a7cb4de5a5e9228c2a7635" id="r_a3ca5d27e76a7cb4de5a5e9228c2a7635"><td class="memItemLeft" align="right" valign="top"><a id="a3ca5d27e76a7cb4de5a5e9228c2a7635" name="a3ca5d27e76a7cb4de5a5e9228c2a7635"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>resumeLiveTracking</b> ()</td></tr>
+<tr class="memdesc:a3ca5d27e76a7cb4de5a5e9228c2a7635"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resumes timer for live tracking. <br /></td></tr>
+<tr class="separator:a3ca5d27e76a7cb4de5a5e9228c2a7635"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1ea261645b9bb15c5c72e818bb32e86" id="r_ac1ea261645b9bb15c5c72e818bb32e86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAPIhandler.html#ac1ea261645b9bb15c5c72e818bb32e86">fetchISSAtTimestamp</a> (qint64 timestamp)</td></tr>
+<tr class="memdesc:ac1ea261645b9bb15c5c72e818bb32e86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connects and sends request using API call to specific date.  <br /></td></tr>
+<tr class="separator:ac1ea261645b9bb15c5c72e818bb32e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -128,6 +139,32 @@ QTimer&#160;</td><td class="memItemRight" valign="bottom"><b>timer</b></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Polls the ISS API and publishes new data. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac1ea261645b9bb15c5c72e818bb32e86" name="ac1ea261645b9bb15c5c72e818bb32e86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1ea261645b9bb15c5c72e818bb32e86">&#9670;&#160;</a></span>fetchISSAtTimestamp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void APIhandler::fetchISSAtTimestamp </td>
+          <td>(</td>
+          <td class="paramtype">qint64&#160;</td>
+          <td class="paramname"><em>timestamp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Connects and sends request using API call to specific date. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timestamp</td><td>Date to poll data from. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="abc02cb9efb48c4d7f1a323a0db2c58f7" name="abc02cb9efb48c4d7f1a323a0db2c58f7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abc02cb9efb48c4d7f1a323a0db2c58f7">&#9670;&#160;</a></span>startConnection()</h2>
 

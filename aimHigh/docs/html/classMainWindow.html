@@ -104,6 +104,16 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>MainWindow</b> (QWidget *parent=nullptr)</td></tr>
 <tr class="memdesc:a996c5a2b6f77944776856f08ec30858d"><td class="mdescLeft">&#160;</td><td class="mdescRight">main window constructor. <br /></td></tr>
 <tr class="separator:a996c5a2b6f77944776856f08ec30858d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac55bce25411c5a13e4430462e4db204" id="r_aac55bce25411c5a13e4430462e4db204"><td class="memItemLeft" align="right" valign="top"><a id="aac55bce25411c5a13e4430462e4db204" name="aac55bce25411c5a13e4430462e4db204"></a>
+QWidget *&#160;</td><td class="memItemRight" valign="bottom"><b>init3DScene</b> ()</td></tr>
+<tr class="memdesc:aac55bce25411c5a13e4430462e4db204"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads 3D scenes from blender. <br /></td></tr>
+<tr class="separator:aac55bce25411c5a13e4430462e4db204"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9150baa6965f6d5e23e8f145d8600c83" id="r_a9150baa6965f6d5e23e8f145d8600c83"><td class="memItemLeft" align="right" valign="top">QVector3D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a9150baa6965f6d5e23e8f145d8600c83">convertLatLonTo3D</a> (float lat, float lon, float altKm)</td></tr>
+<tr class="memdesc:a9150baa6965f6d5e23e8f145d8600c83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves object from blender that simulates ISS.  <br /></td></tr>
+<tr class="separator:a9150baa6965f6d5e23e8f145d8600c83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d3e314f6c6b50a0b2721e020355095f" id="r_a3d3e314f6c6b50a0b2721e020355095f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a3d3e314f6c6b50a0b2721e020355095f">updateEarthRotation</a> (double timestamp)</td></tr>
+<tr class="memdesc:a3d3e314f6c6b50a0b2721e020355095f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotates Earth and ISS to simulate passing days.  <br /></td></tr>
+<tr class="separator:a3d3e314f6c6b50a0b2721e020355095f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae98d00a93bc118200eeef9f9bba1dba7" id="r_ae98d00a93bc118200eeef9f9bba1dba7"><td class="memItemLeft" align="right" valign="top"><a id="ae98d00a93bc118200eeef9f9bba1dba7" name="ae98d00a93bc118200eeef9f9bba1dba7"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>~MainWindow</b> ()</td></tr>
 <tr class="memdesc:ae98d00a93bc118200eeef9f9bba1dba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
@@ -114,6 +124,14 @@ Private Slots</h2></td></tr>
 <tr class="memitem:a2875457cd98936196cc144978ad11b53" id="r_a2875457cd98936196cc144978ad11b53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a2875457cd98936196cc144978ad11b53">updateISSData</a> (double latidude, double longitude, double altitude, double velocity, double timestamp)</td></tr>
 <tr class="memdesc:a2875457cd98936196cc144978ad11b53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slot that updates ISS data whenever new arrives.  <br /></td></tr>
 <tr class="separator:a2875457cd98936196cc144978ad11b53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9289eae3f4712a1a3c6ec80576d38258" id="r_a9289eae3f4712a1a3c6ec80576d38258"><td class="memItemLeft" align="right" valign="top"><a id="a9289eae3f4712a1a3c6ec80576d38258" name="a9289eae3f4712a1a3c6ec80576d38258"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>fetchISSAtSelectedTime</b> ()</td></tr>
+<tr class="memdesc:a9289eae3f4712a1a3c6ec80576d38258"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends infot to apihandler to get data about specific time. <br /></td></tr>
+<tr class="separator:a9289eae3f4712a1a3c6ec80576d38258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58a42321a8e3dadeba9e2e73e618b1f4" id="r_a58a42321a8e3dadeba9e2e73e618b1f4"><td class="memItemLeft" align="right" valign="top"><a id="a58a42321a8e3dadeba9e2e73e618b1f4" name="a58a42321a8e3dadeba9e2e73e618b1f4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>resumeLiveTracking</b> ()</td></tr>
+<tr class="memdesc:a58a42321a8e3dadeba9e2e73e618b1f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends info to apihandler to start timer for live tracking. <br /></td></tr>
+<tr class="separator:a58a42321a8e3dadeba9e2e73e618b1f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -121,6 +139,18 @@ Private Attributes</h2></td></tr>
 Ui::MainWindow *&#160;</td><td class="memItemRight" valign="bottom"><b>ui</b></td></tr>
 <tr class="memdesc:a35466a70ed47252a0191168126a352a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Qt Main Widget. <br /></td></tr>
 <tr class="separator:a35466a70ed47252a0191168126a352a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d2e23ed0ab02d551af540b3ec1eda44" id="r_a6d2e23ed0ab02d551af540b3ec1eda44"><td class="memItemLeft" align="right" valign="top"><a id="a6d2e23ed0ab02d551af540b3ec1eda44" name="a6d2e23ed0ab02d551af540b3ec1eda44"></a>
+Qt3DCore::QTransform *&#160;</td><td class="memItemRight" valign="bottom"><b>issTransform</b> = nullptr</td></tr>
+<tr class="memdesc:a6d2e23ed0ab02d551af540b3ec1eda44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms positions of ISS imported from blender. <br /></td></tr>
+<tr class="separator:a6d2e23ed0ab02d551af540b3ec1eda44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b435a690a46f5afb4cde014d5fcea34" id="r_a5b435a690a46f5afb4cde014d5fcea34"><td class="memItemLeft" align="right" valign="top"><a id="a5b435a690a46f5afb4cde014d5fcea34" name="a5b435a690a46f5afb4cde014d5fcea34"></a>
+Qt3DCore::QTransform *&#160;</td><td class="memItemRight" valign="bottom"><b>earthRotationTransform</b> = nullptr</td></tr>
+<tr class="memdesc:a5b435a690a46f5afb4cde014d5fcea34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms positions of Earth imported from blender. <br /></td></tr>
+<tr class="separator:a5b435a690a46f5afb4cde014d5fcea34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fb5d9b164fe3f90299e5054efe4f12b" id="r_a5fb5d9b164fe3f90299e5054efe4f12b"><td class="memItemLeft" align="right" valign="top"><a id="a5fb5d9b164fe3f90299e5054efe4f12b" name="a5fb5d9b164fe3f90299e5054efe4f12b"></a>
+Qt3DCore::QEntity *&#160;</td><td class="memItemRight" valign="bottom"><b>earthSystemRoot</b> = nullptr</td></tr>
+<tr class="memdesc:a5fb5d9b164fe3f90299e5054efe4f12b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Locks both ISS and Earth to rotate them together with passing day. <br /></td></tr>
+<tr class="separator:a5fb5d9b164fe3f90299e5054efe4f12b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4fc9eddc7897cb3c5a2228d030d50c8" id="r_af4fc9eddc7897cb3c5a2228d030d50c8"><td class="memItemLeft" align="right" valign="top"><a id="af4fc9eddc7897cb3c5a2228d030d50c8" name="af4fc9eddc7897cb3c5a2228d030d50c8"></a>
 <a class="el" href="classAPIhandler.html">APIhandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>apiHandler</b></td></tr>
 <tr class="memdesc:af4fc9eddc7897cb3c5a2228d030d50c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the network calls. <br /></td></tr>
@@ -141,10 +171,96 @@ QLabel *&#160;</td><td class="memItemRight" valign="bottom"><b>issInfo</b></td><
 QWidget *&#160;</td><td class="memItemRight" valign="bottom"><b>earthModel</b></td></tr>
 <tr class="memdesc:a693e2149eb2e23c2e51bba0dd654a60e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Widget for Earth model. <br /></td></tr>
 <tr class="separator:a693e2149eb2e23c2e51bba0dd654a60e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cedf389d9566a737d81b09c69904bd5" id="r_a0cedf389d9566a737d81b09c69904bd5"><td class="memItemLeft" align="right" valign="top"><a id="a0cedf389d9566a737d81b09c69904bd5" name="a0cedf389d9566a737d81b09c69904bd5"></a>
+QWidget *&#160;</td><td class="memItemRight" valign="bottom"><b>container</b></td></tr>
+<tr class="memdesc:a0cedf389d9566a737d81b09c69904bd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Container for blender scene. <br /></td></tr>
+<tr class="separator:a0cedf389d9566a737d81b09c69904bd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01760768be64cce8b19312ddfdc3d19c" id="r_a01760768be64cce8b19312ddfdc3d19c"><td class="memItemLeft" align="right" valign="top"><a id="a01760768be64cce8b19312ddfdc3d19c" name="a01760768be64cce8b19312ddfdc3d19c"></a>
+QDateTimeEdit *&#160;</td><td class="memItemRight" valign="bottom"><b>dateTimeEdit</b></td></tr>
+<tr class="memdesc:a01760768be64cce8b19312ddfdc3d19c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changing date for ISS position calculations. <br /></td></tr>
+<tr class="separator:a01760768be64cce8b19312ddfdc3d19c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20b4477677232f0e9472a1706c307052" id="r_a20b4477677232f0e9472a1706c307052"><td class="memItemLeft" align="right" valign="top"><a id="a20b4477677232f0e9472a1706c307052" name="a20b4477677232f0e9472a1706c307052"></a>
+QPushButton *&#160;</td><td class="memItemRight" valign="bottom"><b>resumeLiveButton</b></td></tr>
+<tr class="memdesc:a20b4477677232f0e9472a1706c307052"><td class="mdescLeft">&#160;</td><td class="mdescRight">Button for user to set current date. <br /></td></tr>
+<tr class="separator:a20b4477677232f0e9472a1706c307052"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fcfe48c0444a7e73cd5951ea8dcd8cf" id="r_a9fcfe48c0444a7e73cd5951ea8dcd8cf"><td class="memItemLeft" align="right" valign="top"><a id="a9fcfe48c0444a7e73cd5951ea8dcd8cf" name="a9fcfe48c0444a7e73cd5951ea8dcd8cf"></a>
+QPushButton *&#160;</td><td class="memItemRight" valign="bottom"><b>fetchDateButton</b></td></tr>
+<tr class="memdesc:a9fcfe48c0444a7e73cd5951ea8dcd8cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Button for user to set custom date. <br /></td></tr>
+<tr class="separator:a9fcfe48c0444a7e73cd5951ea8dcd8cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Main application window showing an Earth model and live ISS stats. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9150baa6965f6d5e23e8f145d8600c83" name="a9150baa6965f6d5e23e8f145d8600c83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9150baa6965f6d5e23e8f145d8600c83">&#9670;&#160;</a></span>convertLatLonTo3D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVector3D MainWindow::convertLatLonTo3D </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>lat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>lon</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>altKm</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Moves object from blender that simulates ISS. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lat</td><td>Current latitude of the ISS. </td></tr>
+    <tr><td class="paramname">lon</td><td>Current longitude of the ISS. </td></tr>
+    <tr><td class="paramname">altKm</td><td>Altitude in kilometers. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3d3e314f6c6b50a0b2721e020355095f" name="a3d3e314f6c6b50a0b2721e020355095f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d3e314f6c6b50a0b2721e020355095f">&#9670;&#160;</a></span>updateEarthRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::updateEarthRotation </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>timestamp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rotates Earth and ISS to simulate passing days. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timestamp</td><td>Current time. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a2875457cd98936196cc144978ad11b53" name="a2875457cd98936196cc144978ad11b53"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2875457cd98936196cc144978ad11b53">&#9670;&#160;</a></span>updateISSData</h2>
 

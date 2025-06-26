@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['earthwidget_0',['earthWidget',['../classearthWidget.html#a2af4ac1a05c2997c59bc5fc28a62926a',1,'earthWidget']]]
+  ['drawsphere_0',['drawSphere',['../classearthWidget.html#a17590eb4136992f9c881367630aa4958',1,'earthWidget']]]
 ];

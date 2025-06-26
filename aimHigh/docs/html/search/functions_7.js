@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['resizegl_0',['resizeGL',['../classearthWidget.html#a5ac5a2dd69147a5805a078826e3f6185',1,'earthWidget']]]
+  ['mainwindow_0',['MainWindow',['../classMainWindow.html#a996c5a2b6f77944776856f08ec30858d',1,'MainWindow']]]
 ];

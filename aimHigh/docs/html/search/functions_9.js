@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['update_0',['update',['../classAPIhandler.html#a486438a74950e5e0db1021b0e07caa12',1,'APIhandler']]],
-  ['updateissdata_1',['updateissdata',['../classearthWidget.html#aef1b878fd8f9210e7583967f43e820b3',1,'earthWidget::updateISSData()'],['../classMainWindow.html#a2875457cd98936196cc144978ad11b53',1,'MainWindow::updateISSData()']]]
+  ['resizegl_0',['resizeGL',['../classearthWidget.html#a5ac5a2dd69147a5805a078826e3f6185',1,'earthWidget']]],
+  ['resumelivetracking_1',['resumelivetracking',['../classAPIhandler.html#a3ca5d27e76a7cb4de5a5e9228c2a7635',1,'APIhandler::resumeLiveTracking()'],['../classMainWindow.html#a58a42321a8e3dadeba9e2e73e618b1f4',1,'MainWindow::resumeLiveTracking()']]]
 ];

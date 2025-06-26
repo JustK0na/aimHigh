@@ -1,7 +1,7 @@
 <RCC>
     <qresource prefix="/translations">
-        <file>i18n/app_en.qm</file>
-	<file>i18n/app_pl.qm</file>
+        <file>i18n/aimHigh_en.qm</file>
+	<file>i18n/aimHigh_pl.qm</file>
     </qresource>
     <qresource prefix="/textures">
         <file>resources/textures/blueMarble.jpg</file>

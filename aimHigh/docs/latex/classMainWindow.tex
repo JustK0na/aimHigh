@@ -15,8 +15,7 @@ Inherits QMain\+Window.
 
 
 
-Collaboration diagram for Main\+Window\+:
-\nopagebreak
+Collaboration diagram for Main\+Window\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -29,6 +28,13 @@ Collaboration diagram for Main\+Window\+:
 \Hypertarget{classMainWindow_a996c5a2b6f77944776856f08ec30858d}\label{classMainWindow_a996c5a2b6f77944776856f08ec30858d} 
 {\bfseries Main\+Window} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
 \begin{DoxyCompactList}\small\item\em main window constructor. \end{DoxyCompactList}\item 
+\Hypertarget{classMainWindow_aac55bce25411c5a13e4430462e4db204}\label{classMainWindow_aac55bce25411c5a13e4430462e4db204} 
+QWidget \texorpdfstring{$\ast$}{*} {\bfseries init3\+DScene} ()
+\begin{DoxyCompactList}\small\item\em Loads 3D scenes from blender. \end{DoxyCompactList}\item 
+QVector3D \mbox{\hyperlink{classMainWindow_a9150baa6965f6d5e23e8f145d8600c83}{convert\+Lat\+Lon\+To3D}} (float lat, float lon, float alt\+Km)
+\begin{DoxyCompactList}\small\item\em Moves object from blender that simulates ISS. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMainWindow_a3d3e314f6c6b50a0b2721e020355095f}{update\+Earth\+Rotation}} (double timestamp)
+\begin{DoxyCompactList}\small\item\em Rotates Earth and ISS to simulate passing days. \end{DoxyCompactList}\item 
 \Hypertarget{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7}\label{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7} 
 {\bfseries \texorpdfstring{$\sim$}{\string~}\+Main\+Window} ()
 \begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -36,13 +42,28 @@ Collaboration diagram for Main\+Window\+:
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classMainWindow_a2875457cd98936196cc144978ad11b53}{update\+ISSData}} (double latidude, double longitude, double altitude, double velocity, double timestamp)
-\begin{DoxyCompactList}\small\item\em Slot that updates ISS data whenever new arrives. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Slot that updates ISS data whenever new arrives. \end{DoxyCompactList}\item 
+\Hypertarget{classMainWindow_a9289eae3f4712a1a3c6ec80576d38258}\label{classMainWindow_a9289eae3f4712a1a3c6ec80576d38258} 
+void {\bfseries fetch\+ISSAt\+Selected\+Time} ()
+\begin{DoxyCompactList}\small\item\em Sends infot to apihandler to get data about specific time. \end{DoxyCompactList}\item 
+\Hypertarget{classMainWindow_a58a42321a8e3dadeba9e2e73e618b1f4}\label{classMainWindow_a58a42321a8e3dadeba9e2e73e618b1f4} 
+void {\bfseries resume\+Live\+Tracking} ()
+\begin{DoxyCompactList}\small\item\em Sends info to apihandler to start timer for live tracking. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{classMainWindow_a35466a70ed47252a0191168126a352a5}\label{classMainWindow_a35466a70ed47252a0191168126a352a5} 
 Ui\+::\+Main\+Window \texorpdfstring{$\ast$}{*} {\bfseries ui}
 \begin{DoxyCompactList}\small\item\em Qt Main Widget. \end{DoxyCompactList}\item 
+\Hypertarget{classMainWindow_a6d2e23ed0ab02d551af540b3ec1eda44}\label{classMainWindow_a6d2e23ed0ab02d551af540b3ec1eda44} 
+Qt3\+DCore\+::\+QTransform \texorpdfstring{$\ast$}{*} {\bfseries iss\+Transform} = nullptr
+\begin{DoxyCompactList}\small\item\em Transforms positions of ISS imported from blender. \end{DoxyCompactList}\item 
+\Hypertarget{classMainWindow_a5b435a690a46f5afb4cde014d5fcea34}\label{classMainWindow_a5b435a690a46f5afb4cde014d5fcea34} 
+Qt3\+DCore\+::\+QTransform \texorpdfstring{$\ast$}{*} {\bfseries earth\+Rotation\+Transform} = nullptr
+\begin{DoxyCompactList}\small\item\em Transforms positions of Earth imported from blender. \end{DoxyCompactList}\item 
+\Hypertarget{classMainWindow_a5fb5d9b164fe3f90299e5054efe4f12b}\label{classMainWindow_a5fb5d9b164fe3f90299e5054efe4f12b} 
+Qt3\+DCore\+::\+QEntity \texorpdfstring{$\ast$}{*} {\bfseries earth\+System\+Root} = nullptr
+\begin{DoxyCompactList}\small\item\em Locks both ISS and Earth to rotate them together with passing day. \end{DoxyCompactList}\item 
 \Hypertarget{classMainWindow_af4fc9eddc7897cb3c5a2228d030d50c8}\label{classMainWindow_af4fc9eddc7897cb3c5a2228d030d50c8} 
 \mbox{\hyperlink{classAPIhandler}{APIhandler}} \texorpdfstring{$\ast$}{*} {\bfseries api\+Handler}
 \begin{DoxyCompactList}\small\item\em Handles the network calls. \end{DoxyCompactList}\item 
@@ -57,13 +78,59 @@ QLabel \texorpdfstring{$\ast$}{*} {\bfseries iss\+Info}
 \begin{DoxyCompactList}\small\item\em Label showing formatted ISS data. \end{DoxyCompactList}\item 
 \Hypertarget{classMainWindow_a693e2149eb2e23c2e51bba0dd654a60e}\label{classMainWindow_a693e2149eb2e23c2e51bba0dd654a60e} 
 QWidget \texorpdfstring{$\ast$}{*} {\bfseries earth\+Model}
-\begin{DoxyCompactList}\small\item\em Widget for Earth model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Widget for Earth model. \end{DoxyCompactList}\item 
+\Hypertarget{classMainWindow_a0cedf389d9566a737d81b09c69904bd5}\label{classMainWindow_a0cedf389d9566a737d81b09c69904bd5} 
+QWidget \texorpdfstring{$\ast$}{*} {\bfseries container}
+\begin{DoxyCompactList}\small\item\em Container for blender scene. \end{DoxyCompactList}\item 
+\Hypertarget{classMainWindow_a01760768be64cce8b19312ddfdc3d19c}\label{classMainWindow_a01760768be64cce8b19312ddfdc3d19c} 
+QDate\+Time\+Edit \texorpdfstring{$\ast$}{*} {\bfseries date\+Time\+Edit}
+\begin{DoxyCompactList}\small\item\em Changing date for ISS position calculations. \end{DoxyCompactList}\item 
+\Hypertarget{classMainWindow_a20b4477677232f0e9472a1706c307052}\label{classMainWindow_a20b4477677232f0e9472a1706c307052} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries resume\+Live\+Button}
+\begin{DoxyCompactList}\small\item\em Button for user to set current date. \end{DoxyCompactList}\item 
+\Hypertarget{classMainWindow_a9fcfe48c0444a7e73cd5951ea8dcd8cf}\label{classMainWindow_a9fcfe48c0444a7e73cd5951ea8dcd8cf} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries fetch\+Date\+Button}
+\begin{DoxyCompactList}\small\item\em Button for user to set custom date. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Main application window showing an Earth model and live ISS stats. 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classMainWindow_a9150baa6965f6d5e23e8f145d8600c83}\label{classMainWindow_a9150baa6965f6d5e23e8f145d8600c83} 
+\index{MainWindow@{MainWindow}!convertLatLonTo3D@{convertLatLonTo3D}}
+\index{convertLatLonTo3D@{convertLatLonTo3D}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{convertLatLonTo3D()}{convertLatLonTo3D()}}
+{\footnotesize\ttfamily QVector3D Main\+Window\+::convert\+Lat\+Lon\+To3D (\begin{DoxyParamCaption}\item[{float}]{lat,  }\item[{float}]{lon,  }\item[{float}]{alt\+Km }\end{DoxyParamCaption})}
+
+
+
+Moves object from blender that simulates ISS. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lat} & Current latitude of the ISS. \\
+\hline
+{\em lon} & Current longitude of the ISS. \\
+\hline
+{\em alt\+Km} & Altitude in kilometers. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMainWindow_a3d3e314f6c6b50a0b2721e020355095f}\label{classMainWindow_a3d3e314f6c6b50a0b2721e020355095f} 
+\index{MainWindow@{MainWindow}!updateEarthRotation@{updateEarthRotation}}
+\index{updateEarthRotation@{updateEarthRotation}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{updateEarthRotation()}{updateEarthRotation()}}
+{\footnotesize\ttfamily void Main\+Window\+::update\+Earth\+Rotation (\begin{DoxyParamCaption}\item[{double}]{timestamp }\end{DoxyParamCaption})}
+
+
+
+Rotates Earth and ISS to simulate passing days. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timestamp} & Current time. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{classMainWindow_a2875457cd98936196cc144978ad11b53}\label{classMainWindow_a2875457cd98936196cc144978ad11b53} 
 \index{MainWindow@{MainWindow}!updateISSData@{updateISSData}}
 \index{updateISSData@{updateISSData}!MainWindow@{MainWindow}}

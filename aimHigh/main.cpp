@@ -9,7 +9,10 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    QTranslator translator;
+    QFont appFont("Courier New", 11); // Or "Monospace", "DejaVu Sans Mono", etc.
+    appFont.setStyleHint(QFont::Monospace); // Ensures monospaced appearance
+    a.setFont(appFont);
+
     MainWindow w;
     w.show();
     return a.exec();

@@ -34,7 +34,15 @@ void \mbox{\hyperlink{classAPIhandler_a486438a74950e5e0db1021b0e07caa12}{update}
 {\bfseries APIhandler} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
 \begin{DoxyCompactList}\small\item\em \doxylink{classAPIhandler}{APIhandler} constructor. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classAPIhandler_abc02cb9efb48c4d7f1a323a0db2c58f7}{start\+Connection}} (int wait=5000)
-\begin{DoxyCompactList}\small\item\em Start polling the API every {\ttfamily wait} milliseconds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Start polling the API every {\ttfamily wait} milliseconds. \end{DoxyCompactList}\item 
+\Hypertarget{classAPIhandler_adc0f97210eced5e7cdff1a46e3c119ee}\label{classAPIhandler_adc0f97210eced5e7cdff1a46e3c119ee} 
+void {\bfseries pause\+Live\+Tracking} ()
+\begin{DoxyCompactList}\small\item\em Stops timer for live tracking. \end{DoxyCompactList}\item 
+\Hypertarget{classAPIhandler_a3ca5d27e76a7cb4de5a5e9228c2a7635}\label{classAPIhandler_a3ca5d27e76a7cb4de5a5e9228c2a7635} 
+void {\bfseries resume\+Live\+Tracking} ()
+\begin{DoxyCompactList}\small\item\em Resumes timer for live tracking. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAPIhandler_ac1ea261645b9bb15c5c72e818bb32e86}{fetch\+ISSAt\+Timestamp}} (qint64 timestamp)
+\begin{DoxyCompactList}\small\item\em Connects and sends request using API call to specific date. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -50,6 +58,21 @@ QTimer {\bfseries timer}
 Polls the ISS API and publishes new data. 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classAPIhandler_ac1ea261645b9bb15c5c72e818bb32e86}\label{classAPIhandler_ac1ea261645b9bb15c5c72e818bb32e86} 
+\index{APIhandler@{APIhandler}!fetchISSAtTimestamp@{fetchISSAtTimestamp}}
+\index{fetchISSAtTimestamp@{fetchISSAtTimestamp}!APIhandler@{APIhandler}}
+\doxysubsubsection{\texorpdfstring{fetchISSAtTimestamp()}{fetchISSAtTimestamp()}}
+{\footnotesize\ttfamily void APIhandler\+::fetch\+ISSAt\+Timestamp (\begin{DoxyParamCaption}\item[{qint64}]{timestamp }\end{DoxyParamCaption})}
+
+
+
+Connects and sends request using API call to specific date. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timestamp} & Date to poll data from. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{classAPIhandler_abc02cb9efb48c4d7f1a323a0db2c58f7}\label{classAPIhandler_abc02cb9efb48c4d7f1a323a0db2c58f7} 
 \index{APIhandler@{APIhandler}!startConnection@{startConnection}}
 \index{startConnection@{startConnection}!APIhandler@{APIhandler}}

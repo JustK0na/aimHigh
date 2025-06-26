@@ -63,7 +63,7 @@ void earthWidget::initializeGL()
 
 
 
-    if (image.load("/home/ai-thigs/studia/WDS/repo/aimHigh/aimHigh/resources/textures/blueMarble.jpg")){
+    if (image.load("/home/mikolaj/studia/WDS/repo/aimHigh/aimHigh/resources/textures/blueMarble.jpg")){
         matrixRotate.translate(center.x(), center.y());
         matrixRotate.rotate(270);
         image = image.transformed(matrixRotate);

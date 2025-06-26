@@ -18,18 +18,24 @@
 \DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
 \DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classAPIhandler}{APIhandler}}(QObject\ *parent\ =\ \textcolor{keyword}{nullptr});}
 \DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAPIhandler_abc02cb9efb48c4d7f1a323a0db2c58f7}{startConnection}}(\textcolor{keywordtype}{int}\ wait\ =\ 5000);}
-\DoxyCodeLine{00034\ signals:}
-\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAPIhandler_a486438a74950e5e0db1021b0e07caa12}{update}}(\textcolor{keywordtype}{double}\ latidute,\ \textcolor{keywordtype}{double}\ longitude,\ \textcolor{keywordtype}{double}\ altitude,\ \textcolor{keywordtype}{double}\ velocity,\ \textcolor{keywordtype}{double}\ timestamp);}
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00045\ \textcolor{keyword}{public}\ slots:}
-\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAPIhandler_a06ded39f2bdf92c5a8a0f74f025e0666}{sendRequest}}();\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAPIhandler_a0aa2e1d1bf4753c0b377fbb807621cff}{getResponse}}();\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00048\ }
-\DoxyCodeLine{00049\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00050\ \ \ \ \ QNetworkAccessManager\ \mbox{\hyperlink{classAPIhandler_a8e5a360ff211cbf50069196b370e7c05}{networkManager}};\ \ \ }
-\DoxyCodeLine{00051\ \ \ \ \ QTimer\ \mbox{\hyperlink{classAPIhandler_a3edf86a68f6e9fdb23137516ef0fe146}{timer}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00052\ \};}
-\DoxyCodeLine{00053\ }
-\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ APIHANDLER\_H}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAPIhandler_adc0f97210eced5e7cdff1a46e3c119ee}{pauseLiveTracking}}();}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAPIhandler_a3ca5d27e76a7cb4de5a5e9228c2a7635}{resumeLiveTracking}}();}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAPIhandler_ac1ea261645b9bb15c5c72e818bb32e86}{fetchISSAtTimestamp}}(qint64\ timestamp);}
+\DoxyCodeLine{00048\ signals:}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAPIhandler_a486438a74950e5e0db1021b0e07caa12}{update}}(\textcolor{keywordtype}{double}\ latidute,\ \textcolor{keywordtype}{double}\ longitude,\ \textcolor{keywordtype}{double}\ altitude,\ \textcolor{keywordtype}{double}\ velocity,\ \textcolor{keywordtype}{double}\ timestamp);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAPIhandler_a06ded39f2bdf92c5a8a0f74f025e0666}{sendRequest}}();\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAPIhandler_a0aa2e1d1bf4753c0b377fbb807621cff}{getResponse}}();\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00064\ \ \ \ \ QNetworkAccessManager\ \mbox{\hyperlink{classAPIhandler_a8e5a360ff211cbf50069196b370e7c05}{networkManager}};\ \ \ }
+\DoxyCodeLine{00065\ \ \ \ \ QTimer\ \mbox{\hyperlink{classAPIhandler_a3edf86a68f6e9fdb23137516ef0fe146}{timer}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ QTimer\ *updateTimer\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00068\ \};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ APIHANDLER\_H}}
 
 \end{DoxyCode}

@@ -10,37 +10,65 @@
 \DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QLabel>}}
 \DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QWidget>}}
 \DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QVBoxLayout>}}
-\DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{apihandler_8h}{apihandler.h}}"{}}}
-\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{earthwidget_8h}{earthwidget.h}}"{}}}
-\DoxyCodeLine{00018\ }
-\DoxyCodeLine{00019\ QT\_BEGIN\_NAMESPACE}
-\DoxyCodeLine{00020\ \textcolor{keyword}{namespace\ }Ui\ \{}
-\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMainWindow}{MainWindow}};}
-\DoxyCodeLine{00022\ \}}
-\DoxyCodeLine{00023\ QT\_END\_NAMESPACE}
-\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMainWindow}{MainWindow}}\ :\ \textcolor{keyword}{public}\ QMainWindow}
-\DoxyCodeLine{00029\ \{}
-\DoxyCodeLine{00030\ \ \ \ \ Q\_OBJECT}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{classMainWindow}{MainWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
-\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7}{\string~MainWindow}}();}
-\DoxyCodeLine{00039\ }
-\DoxyCodeLine{00040\ \textcolor{keyword}{private}\ slots:}
-\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a2875457cd98936196cc144978ad11b53}{updateISSData}}(\textcolor{keywordtype}{double}\ latidude,\ \textcolor{keywordtype}{double}\ longitude,\ \textcolor{keywordtype}{double}\ altitude,\ \textcolor{keywordtype}{double}\ velocity,\ \textcolor{keywordtype}{double}\ timestamp);}
-\DoxyCodeLine{00050\ }
-\DoxyCodeLine{00051\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00052\ \ \ \ \ Ui::MainWindow\ *\mbox{\hyperlink{classMainWindow_a35466a70ed47252a0191168126a352a5}{ui}};\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00053\ }
-\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{classAPIhandler}{APIhandler}}\ *\mbox{\hyperlink{classMainWindow_af4fc9eddc7897cb3c5a2228d030d50c8}{apiHandler}};\ \ \ \ \ }
-\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{classearthWidget}{earthWidget}}\ *\mbox{\hyperlink{classMainWindow_af530776471e7f42459a46f98e125e087}{earthView}};\ \ \ \ \ }
-\DoxyCodeLine{00056\ }
-\DoxyCodeLine{00057\ \ \ \ \ QWidget\ *\mbox{\hyperlink{classMainWindow_ae10a7823d4e6a14e71cec217788e54ae}{stats}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00058\ \ \ \ \ QLabel\ *\mbox{\hyperlink{classMainWindow_a9e2db187227c5c286f6b585163708124}{issInfo}};\ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00059\ }
-\DoxyCodeLine{00060\ \ \ \ \ QWidget\ *\mbox{\hyperlink{classMainWindow_a693e2149eb2e23c2e51bba0dd654a60e}{earthModel}};\ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00061\ \};}
-\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MAINWINDOW\_H}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <Qt3DCore>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QPushButton>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <QDateTimeEdit>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{apihandler_8h}{apihandler.h}}"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{earthwidget_8h}{earthwidget.h}}"{}}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{00022\ \textcolor{keyword}{namespace\ }Ui\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMainWindow}{MainWindow}};}
+\DoxyCodeLine{00024\ \}}
+\DoxyCodeLine{00025\ QT\_END\_NAMESPACE}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMainWindow}{MainWindow}}\ :\ \textcolor{keyword}{public}\ QMainWindow}
+\DoxyCodeLine{00031\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{classMainWindow}{MainWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00042\ \ \ \ \ QWidget*\ \mbox{\hyperlink{classMainWindow_aac55bce25411c5a13e4430462e4db204}{init3DScene}}();}
+\DoxyCodeLine{00049\ \ \ \ \ QVector3D\ \mbox{\hyperlink{classMainWindow_a9150baa6965f6d5e23e8f145d8600c83}{convertLatLonTo3D}}(\textcolor{keywordtype}{float}\ lat,\ \textcolor{keywordtype}{float}\ lon,\ \textcolor{keywordtype}{float}\ altKm);}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a3d3e314f6c6b50a0b2721e020355095f}{updateEarthRotation}}(\textcolor{keywordtype}{double}\ timestamp);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ switchLanguage(\textcolor{keyword}{const}\ QString\ \&languageCode);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7}{\string~MainWindow}}();}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a2875457cd98936196cc144978ad11b53}{updateISSData}}(\textcolor{keywordtype}{double}\ latidude,\ \textcolor{keywordtype}{double}\ longitude,\ \textcolor{keywordtype}{double}\ altitude,\ \textcolor{keywordtype}{double}\ velocity,\ \textcolor{keywordtype}{double}\ timestamp);}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a9289eae3f4712a1a3c6ec80576d38258}{fetchISSAtSelectedTime}}();}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a58a42321a8e3dadeba9e2e73e618b1f4}{resumeLiveTracking}}();}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00081\ \ \ \ \ Ui::MainWindow\ *\mbox{\hyperlink{classMainWindow_a35466a70ed47252a0191168126a352a5}{ui}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ Qt3DCore::QTransform\ *\mbox{\hyperlink{classMainWindow_a6d2e23ed0ab02d551af540b3ec1eda44}{issTransform}}\ =\ \textcolor{keyword}{nullptr};\ }
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ Qt3DCore::QTransform\ *\mbox{\hyperlink{classMainWindow_a5b435a690a46f5afb4cde014d5fcea34}{earthRotationTransform}}\ =\ \textcolor{keyword}{nullptr};\ }
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ Qt3DCore::QEntity\ *\mbox{\hyperlink{classMainWindow_a5fb5d9b164fe3f90299e5054efe4f12b}{earthSystemRoot}}\ =\ \textcolor{keyword}{nullptr};\ }
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \mbox{\hyperlink{classAPIhandler}{APIhandler}}\ *\mbox{\hyperlink{classMainWindow_af4fc9eddc7897cb3c5a2228d030d50c8}{apiHandler}};\ \ \ \ \ }
+\DoxyCodeLine{00090\ \ \ \ \ \mbox{\hyperlink{classearthWidget}{earthWidget}}\ *\mbox{\hyperlink{classMainWindow_af530776471e7f42459a46f98e125e087}{earthView}};\ \ \ \ \ }
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ QWidget\ *\mbox{\hyperlink{classMainWindow_ae10a7823d4e6a14e71cec217788e54ae}{stats}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00093\ \ \ \ \ QLabel\ *\mbox{\hyperlink{classMainWindow_a9e2db187227c5c286f6b585163708124}{issInfo}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ QWidget\ *\mbox{\hyperlink{classMainWindow_a693e2149eb2e23c2e51bba0dd654a60e}{earthModel}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ QWidget\ *\mbox{\hyperlink{classMainWindow_a0cedf389d9566a737d81b09c69904bd5}{container}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ QDateTimeEdit\ *\mbox{\hyperlink{classMainWindow_a01760768be64cce8b19312ddfdc3d19c}{dateTimeEdit}};\ }
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ QPushButton\ *\mbox{\hyperlink{classMainWindow_a20b4477677232f0e9472a1706c307052}{resumeLiveButton}};\ }
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ QPushButton\ *\mbox{\hyperlink{classMainWindow_a9fcfe48c0444a7e73cd5951ea8dcd8cf}{fetchDateButton}};\ }
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ QTranslator\ translator;}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ QString\ currentLanguage;}
+\DoxyCodeLine{00108\ \};}
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MAINWINDOW\_H}}
 
 \end{DoxyCode}

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7emainwindow_0',['~MainWindow',['../classMainWindow.html#ae98d00a93bc118200eeef9f9bba1dba7',1,'MainWindow']]]
+  ['timer_0',['timer',['../classAPIhandler.html#a3edf86a68f6e9fdb23137516ef0fe146',1,'APIhandler']]]
 ];

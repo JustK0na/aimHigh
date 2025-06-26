@@ -23,8 +23,6 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent), ui(new Ui::MainWind
 
     stats = new QWidget(this);
     issInfo = new QLabel(tr("Waiting for ISS data..."), stats);
-    QFont font("Arial", 12);
-    issInfo->setFont(font);
     QVBoxLayout *statsLayout = new QVBoxLayout(stats);
     statsLayout->addWidget(issInfo);
 
@@ -114,15 +112,18 @@ void MainWindow::updateISSData(double latitude, double longitude, double altitud
     ts = *localtime(&now);
     strftime(buf, sizeof(buf), "%a %Y-%m-%d %H:%M:%S %Z", &ts);
 
-    QString info = tr("ISS is now here: \nLatitude: %1\nLongitude: %2\nAltitude: %3 km\nVelocity: %4 km\\h\nDate: %5")
-                       .arg(latitude, 0, 'f', 2)
-                       .arg(longitude, 0, 'f', 2)
-                       .arg(altitude, 0, 'f', 2)
-                       .arg(velocity, 0, 'f', 2)
-                       .arg(buf);
+    QString info =
+        QString("%1 %2 °\n").arg(tr("Latitude:").leftJustified(12),
+                                            QString::asprintf("%6.2f", std::abs(latitude))).rightJustified(8)
+        + QString("%1  %2 °\n").arg(tr("Longitude:").leftJustified(12),
+                                            QString::asprintf("%6.2f", std::abs(longitude))).rightJustified(8)
+
+        + QString("%1 %2 km\n").arg(tr("Altitude:").leftJustified(12),
+                                            QString::asprintf("%7.2f", altitude)).rightJustified(9)
+        + QString("%1  %2 km/h\n").arg(tr("Velocity:").leftJustified(12),
+                                            QString::asprintf("%08.2f", velocity)).rightJustified(9)
+        + tr("Date: %1").arg(buf);
     issInfo->setText(info);
-    QFont font("Arial", 12);
-    issInfo->setFont(font);
 
     if (issTransform) {
         QVector3D pos = convertLatLonTo3D(latitude, longitude, altitude);
@@ -147,22 +148,22 @@ QWidget* MainWindow::init3DScene() {
     earthRotationTransform = new Qt3DCore::QTransform();
     earthSystemRoot->addComponent(earthRotationTransform);
 
-    // Qt3DCore::QEntity *lightEntity = new Qt3DCore::QEntity(rootEntity);
-    // auto *light = new Qt3DRender::QPointLight(lightEntity);
-    // light->setColor(Qt::white);
-    // light->setIntensity(3.0f);
-    // light->setConstantAttenuation(0.5f);
+    Qt3DCore::QEntity *lightEntity = new Qt3DCore::QEntity(rootEntity);
+    auto *light = new Qt3DRender::QPointLight(lightEntity);
+    light->setColor(Qt::white);
+    light->setIntensity(3.0f);
+    light->setConstantAttenuation(0.5f);
 
 
-    // auto *lightTransform = new Qt3DCore::QTransform();
-    // lightTransform->setTranslation(QVector3D(0.0f, 100.0f, 230.0f));  // ustawić na zwrotnik raka
+    auto *lightTransform = new Qt3DCore::QTransform();
+    lightTransform->setTranslation(QVector3D(0.0f, 100.0f, 230.0f));  // ustawić na zwrotnik raka
 
-    // lightEntity->addComponent(light);
-    // lightEntity->addComponent(lightTransform);
+    lightEntity->addComponent(light);
+    lightEntity->addComponent(lightTransform);
 
 
     auto *loader = new Qt3DRender::QSceneLoader(rootEntity);
-    QString modelPath = QDir::cleanPath(QCoreApplication::applicationDirPath() + "/../../../repo/aimHigh/aimHigh/models/model.gltf");
+    QString modelPath = QDir::cleanPath(QCoreApplication::applicationDirPath() + "/../../../aimHigh/models/model.gltf");
     qDebug() << "Model path:" << modelPath;
     qDebug() << "Exists:" << QFile::exists(modelPath);
     loader->setSource(QUrl::fromLocalFile(modelPath));
@@ -249,17 +250,19 @@ void MainWindow::switchLanguage(const QString &languageCode) {
 
     qApp->removeTranslator(&translator);
 
-    QFile testPl(":/translations/app_pl.qm");
-    QFile testEn(":/translations/app_en.qm");
-    qDebug() << "PL file exists in qrc:" << testPl.exists();
-    qDebug() << "EN file exists in qrc:" << testEn.exists();
+    // QFile testPl(":/translations/aimHigh_pl.qm");
+    // QFile testEn(":/translations/aimHigh_en.qm");
+    // qDebug() << "PL file exists in qrc:" << testPl.exists();
+    // qDebug() << "EN file exists in qrc:" << testEn.exists();
 
-    QString translationFile = QString(":/translations/app_%1.qm").arg(languageCode);
+    QString translationFile = QString(":/translations/i18n/aimHigh_%1.qm").arg(languageCode);
     if (translator.load(translationFile)) {
         qApp->installTranslator(&translator);
         issInfo->setText(tr("Waiting for ISS data..."));
         fetchDateButton->setText(tr("Show ISS at Selected Time"));
         resumeLiveButton->setText(tr("Resume Live Tracking"));
+        qDebug() << "all translations updated" << translationFile;
+        // updateISSData(1,2,3,4,5);
     } else {
         qDebug() << "Translation file not found:" << translationFile;
     }

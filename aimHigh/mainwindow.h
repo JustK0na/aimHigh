@@ -52,7 +52,10 @@ public:
      * @param timestamp Current time.
      */
     void updateEarthRotation(double timestamp);
-
+    /**
+     * @brief Updates all string to switch to another language..
+     * @param languageCode string: "pl" or "en".
+     */
     void switchLanguage(const QString &languageCode);
 
     /** @brief Destructor. */

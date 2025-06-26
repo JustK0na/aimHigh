@@ -1,4 +1,8 @@
 var searchData=
 [
-  ['timer_0',['timer',['../classAPIhandler.html#a3edf86a68f6e9fdb23137516ef0fe146',1,'APIhandler']]]
+  ['issalt_0',['issAlt',['../classearthWidget.html#a4e0c26ad5499a182e4695a81368daa3e',1,'earthWidget']]],
+  ['issinfo_1',['issInfo',['../classMainWindow.html#a9e2db187227c5c286f6b585163708124',1,'MainWindow']]],
+  ['isslat_2',['issLat',['../classearthWidget.html#acd4fca77ccdc3ae3fc985d8db10620ed',1,'earthWidget']]],
+  ['isslon_3',['issLon',['../classearthWidget.html#ad738e8de88eab589dc00e8bf8237907e',1,'earthWidget']]],
+  ['isstransform_4',['issTransform',['../classMainWindow.html#a6d2e23ed0ab02d551af540b3ec1eda44',1,'MainWindow']]]
 ];

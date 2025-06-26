@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['stats_0',['stats',['../classMainWindow.html#ae10a7823d4e6a14e71cec217788e54ae',1,'MainWindow']]]
+  ['fetchdatebutton_0',['fetchDateButton',['../classMainWindow.html#a9fcfe48c0444a7e73cd5951ea8dcd8cf',1,'MainWindow']]]
 ];
