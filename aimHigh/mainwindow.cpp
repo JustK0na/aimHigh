@@ -113,16 +113,16 @@ void MainWindow::updateISSData(double latitude, double longitude, double altitud
     strftime(buf, sizeof(buf), "%a %Y-%m-%d %H:%M:%S %Z", &ts);
 
     QString info =
-        QString("%1 %2 °\n").arg(tr("Latitude:").leftJustified(12),
+        QString("%1 %2 °\n").arg(tr("Latitude: ").leftJustified(12),
                                             QString::asprintf("%6.2f", std::abs(latitude))).rightJustified(8)
         + QString("%1  %2 °\n").arg(tr("Longitude:").leftJustified(12),
                                             QString::asprintf("%6.2f", std::abs(longitude))).rightJustified(8)
 
-        + QString("%1 %2 km\n").arg(tr("Altitude:").leftJustified(12),
+        + QString("%1 %2 km\n").arg(tr("Altitude: ").leftJustified(12),
                                             QString::asprintf("%7.2f", altitude)).rightJustified(9)
-        + QString("%1  %2 km/h\n").arg(tr("Velocity:").leftJustified(12),
+        + QString("\n\n%1  %2 km/h\n").arg(tr("Velocity: ").leftJustified(12),
                                             QString::asprintf("%08.2f", velocity)).rightJustified(9)
-        + tr("Date: %1").arg(buf);
+        + tr("\n\nDate: %1").arg(buf);
     issInfo->setText(info);
 
     if (issTransform) {

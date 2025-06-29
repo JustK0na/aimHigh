@@ -35,6 +35,8 @@ QVector3D \mbox{\hyperlink{classMainWindow_a9150baa6965f6d5e23e8f145d8600c83}{co
 \begin{DoxyCompactList}\small\item\em Moves object from blender that simulates ISS. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classMainWindow_a3d3e314f6c6b50a0b2721e020355095f}{update\+Earth\+Rotation}} (double timestamp)
 \begin{DoxyCompactList}\small\item\em Rotates Earth and ISS to simulate passing days. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMainWindow_a8c46e71d664701ebec584cf9683b76c5}{switch\+Language}} (const QString \&language\+Code)
+\begin{DoxyCompactList}\small\item\em Updates all string to switch to another language.. \end{DoxyCompactList}\item 
 \Hypertarget{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7}\label{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7} 
 {\bfseries \texorpdfstring{$\sim$}{\string~}\+Main\+Window} ()
 \begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -114,6 +116,21 @@ Moves object from blender that simulates ISS.
 {\em lon} & Current longitude of the ISS. \\
 \hline
 {\em alt\+Km} & Altitude in kilometers. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMainWindow_a8c46e71d664701ebec584cf9683b76c5}\label{classMainWindow_a8c46e71d664701ebec584cf9683b76c5} 
+\index{MainWindow@{MainWindow}!switchLanguage@{switchLanguage}}
+\index{switchLanguage@{switchLanguage}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{switchLanguage()}{switchLanguage()}}
+{\footnotesize\ttfamily void Main\+Window\+::switch\+Language (\begin{DoxyParamCaption}\item[{const QString \&}]{language\+Code }\end{DoxyParamCaption})}
+
+
+
+Updates all string to switch to another language.. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em language\+Code} & string\+: "{}pl"{} or "{}en"{}. \\
 \hline
 \end{DoxyParams}
 \Hypertarget{classMainWindow_a3d3e314f6c6b50a0b2721e020355095f}\label{classMainWindow_a3d3e314f6c6b50a0b2721e020355095f} 

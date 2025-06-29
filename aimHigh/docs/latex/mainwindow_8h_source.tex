@@ -30,45 +30,44 @@
 \DoxyCodeLine{00042\ \ \ \ \ QWidget*\ \mbox{\hyperlink{classMainWindow_aac55bce25411c5a13e4430462e4db204}{init3DScene}}();}
 \DoxyCodeLine{00049\ \ \ \ \ QVector3D\ \mbox{\hyperlink{classMainWindow_a9150baa6965f6d5e23e8f145d8600c83}{convertLatLonTo3D}}(\textcolor{keywordtype}{float}\ lat,\ \textcolor{keywordtype}{float}\ lon,\ \textcolor{keywordtype}{float}\ altKm);}
 \DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a3d3e314f6c6b50a0b2721e020355095f}{updateEarthRotation}}(\textcolor{keywordtype}{double}\ timestamp);}
-\DoxyCodeLine{00055\ }
-\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ switchLanguage(\textcolor{keyword}{const}\ QString\ \&languageCode);}
-\DoxyCodeLine{00057\ }
-\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7}{\string~MainWindow}}();}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a8c46e71d664701ebec584cf9683b76c5}{switchLanguage}}(\textcolor{keyword}{const}\ QString\ \&languageCode);}
 \DoxyCodeLine{00060\ }
-\DoxyCodeLine{00061\ \textcolor{keyword}{private}\ slots:}
-\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a2875457cd98936196cc144978ad11b53}{updateISSData}}(\textcolor{keywordtype}{double}\ latidude,\ \textcolor{keywordtype}{double}\ longitude,\ \textcolor{keywordtype}{double}\ altitude,\ \textcolor{keywordtype}{double}\ velocity,\ \textcolor{keywordtype}{double}\ timestamp);}
-\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a9289eae3f4712a1a3c6ec80576d38258}{fetchISSAtSelectedTime}}();}
-\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a58a42321a8e3dadeba9e2e73e618b1f4}{resumeLiveTracking}}();}
-\DoxyCodeLine{00079\ }
-\DoxyCodeLine{00080\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00081\ \ \ \ \ Ui::MainWindow\ *\mbox{\hyperlink{classMainWindow_a35466a70ed47252a0191168126a352a5}{ui}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7}{\string~MainWindow}}();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a2875457cd98936196cc144978ad11b53}{updateISSData}}(\textcolor{keywordtype}{double}\ latidude,\ \textcolor{keywordtype}{double}\ longitude,\ \textcolor{keywordtype}{double}\ altitude,\ \textcolor{keywordtype}{double}\ velocity,\ \textcolor{keywordtype}{double}\ timestamp);}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a9289eae3f4712a1a3c6ec80576d38258}{fetchISSAtSelectedTime}}();}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a58a42321a8e3dadeba9e2e73e618b1f4}{resumeLiveTracking}}();}
 \DoxyCodeLine{00082\ }
-\DoxyCodeLine{00083\ \ \ \ \ Qt3DCore::QTransform\ *\mbox{\hyperlink{classMainWindow_a6d2e23ed0ab02d551af540b3ec1eda44}{issTransform}}\ =\ \textcolor{keyword}{nullptr};\ }
-\DoxyCodeLine{00084\ }
-\DoxyCodeLine{00085\ \ \ \ \ Qt3DCore::QTransform\ *\mbox{\hyperlink{classMainWindow_a5b435a690a46f5afb4cde014d5fcea34}{earthRotationTransform}}\ =\ \textcolor{keyword}{nullptr};\ }
-\DoxyCodeLine{00086\ }
-\DoxyCodeLine{00087\ \ \ \ \ Qt3DCore::QEntity\ *\mbox{\hyperlink{classMainWindow_a5fb5d9b164fe3f90299e5054efe4f12b}{earthSystemRoot}}\ =\ \textcolor{keyword}{nullptr};\ }
-\DoxyCodeLine{00088\ }
-\DoxyCodeLine{00089\ \ \ \ \ \mbox{\hyperlink{classAPIhandler}{APIhandler}}\ *\mbox{\hyperlink{classMainWindow_af4fc9eddc7897cb3c5a2228d030d50c8}{apiHandler}};\ \ \ \ \ }
-\DoxyCodeLine{00090\ \ \ \ \ \mbox{\hyperlink{classearthWidget}{earthWidget}}\ *\mbox{\hyperlink{classMainWindow_af530776471e7f42459a46f98e125e087}{earthView}};\ \ \ \ \ }
+\DoxyCodeLine{00083\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00084\ \ \ \ \ Ui::MainWindow\ *\mbox{\hyperlink{classMainWindow_a35466a70ed47252a0191168126a352a5}{ui}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ Qt3DCore::QTransform\ *\mbox{\hyperlink{classMainWindow_a6d2e23ed0ab02d551af540b3ec1eda44}{issTransform}}\ =\ \textcolor{keyword}{nullptr};\ }
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ Qt3DCore::QTransform\ *\mbox{\hyperlink{classMainWindow_a5b435a690a46f5afb4cde014d5fcea34}{earthRotationTransform}}\ =\ \textcolor{keyword}{nullptr};\ }
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ Qt3DCore::QEntity\ *\mbox{\hyperlink{classMainWindow_a5fb5d9b164fe3f90299e5054efe4f12b}{earthSystemRoot}}\ =\ \textcolor{keyword}{nullptr};\ }
 \DoxyCodeLine{00091\ }
-\DoxyCodeLine{00092\ \ \ \ \ QWidget\ *\mbox{\hyperlink{classMainWindow_ae10a7823d4e6a14e71cec217788e54ae}{stats}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00093\ \ \ \ \ QLabel\ *\mbox{\hyperlink{classMainWindow_a9e2db187227c5c286f6b585163708124}{issInfo}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00092\ \ \ \ \ \mbox{\hyperlink{classAPIhandler}{APIhandler}}\ *\mbox{\hyperlink{classMainWindow_af4fc9eddc7897cb3c5a2228d030d50c8}{apiHandler}};\ \ \ \ \ }
+\DoxyCodeLine{00093\ \ \ \ \ \mbox{\hyperlink{classearthWidget}{earthWidget}}\ *\mbox{\hyperlink{classMainWindow_af530776471e7f42459a46f98e125e087}{earthView}};\ \ \ \ \ }
 \DoxyCodeLine{00094\ }
-\DoxyCodeLine{00095\ \ \ \ \ QWidget\ *\mbox{\hyperlink{classMainWindow_a693e2149eb2e23c2e51bba0dd654a60e}{earthModel}};\ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00096\ }
-\DoxyCodeLine{00097\ \ \ \ \ QWidget\ *\mbox{\hyperlink{classMainWindow_a0cedf389d9566a737d81b09c69904bd5}{container}};\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00098\ }
-\DoxyCodeLine{00099\ \ \ \ \ QDateTimeEdit\ *\mbox{\hyperlink{classMainWindow_a01760768be64cce8b19312ddfdc3d19c}{dateTimeEdit}};\ }
-\DoxyCodeLine{00100\ }
-\DoxyCodeLine{00101\ \ \ \ \ QPushButton\ *\mbox{\hyperlink{classMainWindow_a20b4477677232f0e9472a1706c307052}{resumeLiveButton}};\ }
-\DoxyCodeLine{00102\ }
-\DoxyCodeLine{00103\ \ \ \ \ QPushButton\ *\mbox{\hyperlink{classMainWindow_a9fcfe48c0444a7e73cd5951ea8dcd8cf}{fetchDateButton}};\ }
-\DoxyCodeLine{00104\ }
-\DoxyCodeLine{00105\ \ \ \ \ QTranslator\ translator;}
-\DoxyCodeLine{00106\ }
-\DoxyCodeLine{00107\ \ \ \ \ QString\ currentLanguage;}
-\DoxyCodeLine{00108\ \};}
-\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MAINWINDOW\_H}}
+\DoxyCodeLine{00095\ \ \ \ \ QWidget\ *\mbox{\hyperlink{classMainWindow_ae10a7823d4e6a14e71cec217788e54ae}{stats}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00096\ \ \ \ \ QLabel\ *\mbox{\hyperlink{classMainWindow_a9e2db187227c5c286f6b585163708124}{issInfo}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ QWidget\ *\mbox{\hyperlink{classMainWindow_a693e2149eb2e23c2e51bba0dd654a60e}{earthModel}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ QWidget\ *\mbox{\hyperlink{classMainWindow_a0cedf389d9566a737d81b09c69904bd5}{container}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ QDateTimeEdit\ *\mbox{\hyperlink{classMainWindow_a01760768be64cce8b19312ddfdc3d19c}{dateTimeEdit}};\ }
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ QPushButton\ *\mbox{\hyperlink{classMainWindow_a20b4477677232f0e9472a1706c307052}{resumeLiveButton}};\ }
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \ \ QPushButton\ *\mbox{\hyperlink{classMainWindow_a9fcfe48c0444a7e73cd5951ea8dcd8cf}{fetchDateButton}};\ }
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ QTranslator\ translator;}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ QString\ currentLanguage;}
+\DoxyCodeLine{00111\ \};}
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MAINWINDOW\_H}}
 
 \end{DoxyCode}
