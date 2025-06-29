@@ -9,8 +9,8 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    QFont appFont("Courier New", 11); // Or "Monospace", "DejaVu Sans Mono", etc.
-    appFont.setStyleHint(QFont::Monospace); // Ensures monospaced appearance
+    QFont appFont("Courier New", 11);
+    appFont.setStyleHint(QFont::Monospace);
     a.setFont(appFont);
 
     MainWindow w;

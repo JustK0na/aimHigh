@@ -13,19 +13,13 @@ find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets LinguistTools Quick Ne
 find_package(Qt6 REQUIRED COMPONENTS Widgets LinguistTools Quick Network Core OpenGLWidgets)
 find_package(Qt6 REQUIRED COMPONENTS 3DCore 3DRender 3DExtras 3DInput Widgets)
 
-# Define translation source files (.ts)
 set(TS_FILES
     ${CMAKE_SOURCE_DIR}/i18n/aimHigh_en.ts
     ${CMAKE_SOURCE_DIR}/i18n/aimHigh_pl.ts
 )
 
-# Add translations (.qm files will be created from .ts)
 qt_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
 
-# Add resource file with embedded .qm
-# qt_add_resources(APP_RESOURCES resources.qrc)
-
-# Define project sources
 set(PROJECT_SOURCES
     main.cpp
     mainwindow.cpp
@@ -39,14 +33,12 @@ set(PROJECT_SOURCES
     #${RESOURCES}
 )
 
-# Add the executable
 qt_add_executable(aimHigh
     MANUAL_FINALIZATION
     ${PROJECT_SOURCES}
     ${APP_RESOURCES}
 )
 
-# Link libraries
 target_link_libraries(aimHigh
     PRIVATE
     Qt6::Widgets
@@ -61,7 +53,6 @@ target_link_libraries(aimHigh
     Qt6::3DInput
 )
 
-# Bundle settings
 if(${QT_VERSION} VERSION_LESS 6.1.0)
     set(BUNDLE_ID_OPTION MACOSX_BUNDLE_GUI_IDENTIFIER com.example.aimHigh)
 endif()
@@ -73,7 +64,6 @@ set_target_properties(aimHigh PROPERTIES
     WIN32_EXECUTABLE TRUE
 )
 
-# Install rules
 include(GNUInstallDirs)
 install(TARGETS aimHigh
     BUNDLE DESTINATION .
@@ -81,7 +71,6 @@ install(TARGETS aimHigh
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
 
-# Finalize executable (embed translations)
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(aimHigh ${QM_FILES})
 endif()
